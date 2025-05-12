@@ -59,22 +59,45 @@
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(6px); /* efecto glassmorphism */
+  backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .big-speaker img {
   max-height: 95%;
   object-fit: contain;
+  position: absolute;
+  bottom: 60px; /* Deja espacio para el info box */
   transition: transform 0.3s ease;
 }
 
-.big-speaker:hover {
-  transform: scale(1.02);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+.speaker-info {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
+
+.speaker-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.speaker-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
 /* Efecto extra al pasar el mouse por el contenedor */
 .central-speaker:hover .big-speaker {
   transform: scale(1.05);

@@ -78,8 +78,11 @@ padding: 0 10rem;
 }
 
 .logo-image {
-  max-width: 560px;
+  max-height: 200px;
+  object-fit: contain;
+  margin-top: 1rem;
 }
+
 
 .title {
   font-size: 3.5rem;
