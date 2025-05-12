@@ -1,0 +1,93 @@
+/* Estructura general de los speakers */
+.speakers-layout {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.speakers-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Miniaturas de los speakers (círculos a la izquierda) */
+.mini-speaker {
+  width: 130px;
+  height: 100%;
+  border-radius: 20%;
+  /* margin-right: -12px; */
+  /* border: 2px solid #08003b; */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  object-fit: cover;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.37) 1%, rgba(255, 255, 255, 0) 50%);
+}
+
+.mini-speaker:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+/* .speakers-list>img:hover {
+  transform: scale(1.2);
+} */
+
+/* Contenedor del speaker principal (derecha) */
+.central-speaker {
+  height: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Imagen grande del speaker */
+.big-speaker {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecto extra al pasar el mouse por el contenedor */
+.central-speaker:hover .big-speaker {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .speakers-layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .speakers-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mini-speaker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .central-speaker {
+    width: 300px;
+    height: 400px;
+  }
+
+  .big-speaker {
+    height: 100%;
+  }
+}
