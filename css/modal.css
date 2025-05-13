@@ -1,0 +1,104 @@
+/* Estilo base del dialog */
+dialog#launchModal {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background: rgba(10, 10, 25, 0.85);
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  animation: fadeInScale 0.4s ease;
+  text-align: center;
+}
+
+/* Fondo semi-transparente al abrir el modal */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Estilos del encabezado y párrafo */
+dialog#launchModal h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+dialog#launchModal p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+/* Botón dentro del formulario */
+dialog#launchModal form button {
+  background: transparent;
+  border: 2px solid #6c4eff;
+  color: #6c4eff;
+  font-weight: bold;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+dialog#launchModal form button:hover {
+  background: #6c4eff;
+  color: white;
+}
+
+/* Animación */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Campo de texto */
+.modal-input {
+  width: 80%;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  background-color: #ffffff15;
+  color: white;
+  outline: none;
+  border: 1px solid #6c4eff;
+  backdrop-filter: blur(6px);
+}
+
+.modal-input::placeholder {
+  color: #ccc;
+}
+
+/* Contenedor de botones */
+.modal-actions {
+
+  padding: 0.9rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Estilo botón secundario */
+.cta-btn.outline {
+  background: transparent;
+  border: 2px solid #6c4eff;
+  color: #6c4eff;
+}
+
+.cta-btn.outline:hover {
+  background: #6c4eff;
+  color: white;
+}

@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="speakers/speakers.css" />
     <link rel="stylesheet" href="header/header.css" />
+      <link rel="stylesheet" href="css/modal.css" />
+
+      <link rel="stylesheet" href="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.css" />
+<script src="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
+
 </head>
 <body>
     <!-- Menú superior -->
@@ -33,21 +38,45 @@
       
       <div class="buttons">
         <button class="cta-btn primary">Adquiere tu entrada</button>
-        <button class="cta-btn outline">Ingresar</button>
+        <button class="cta-btn outline" id="openModalBtn">Ingresar</button>
       </div>
 
+      <dialog id="launchModal">
+        <h2>¡Bienvenido a Launch Mastery!</h2>
+        <p>Regístrate para asegurar tu cupo en el evento más importante del año.</p>
+
+        <form class="modal-form">
+          <input
+            id="email"
+            type="email"
+            placeholder="Correo electrónico"
+            required
+            class="modal-input"
+          />
+          <p id="msg" style="margin: 0; color: #f88; font-size: 0.9rem;"></p>
+
+          <div class="modal-actions">
+            <button type="button" class="cta-btn primary" id="login">Ingresar</button>
+            <button type="button" class="cta-btn outline" id="closeModal">Soporte</button>
+          </div>
+        </form>
+      </dialog>
+
+
+
+
       <div class="stats">
-        <div class="stat-box"><strong>27k+</strong><span>Asistentes</span></div>
-        <div class="stat-box"><strong>50+</strong><span>Expertos</span></div>
+        <div class="stat-box"><strong>2k+</strong><span>Asistentes</span></div>
+        <div class="stat-box"><strong>8+</strong><span>Expertos</span></div>
         <div class="stat-box"><strong>3 días</strong><span>Evento</span></div>
       </div>
 
 <div class="speakers-list">
-  <img src="assets/images/JEYSON.png" class="mini-speaker" data-name="Jeyson Prada" data-role="Experto en automatizaciones" />
-  <img src="assets/images/JULIANA.png" class="mini-speaker" data-name="Juliana Díaz" data-role="Estratega de funnels" />
-  <img src="assets/images/JUANJO.png" class="mini-speaker" data-name="Juan José" data-role="Especialista en lanzamientos" />
-  <img src="assets/images/PAOLA.png" class="mini-speaker" data-name="Paola Herrera" data-role="Coach de productividad" />
-  <img src="assets/images/SAID.png" class="mini-speaker" data-name="Said Ramírez" data-role="Copywriter persuasivo" />
+  <img src="assets/images/JEYSON.png" class="mini-speaker" data-name="JEYSON PRADA" data-role="Experto en automatizaciones" />
+  <img src="assets/images/JULIANA.png" class="mini-speaker" data-name="JULIANA PEÑA" data-role="Estratega de funnels" />
+  <img src="assets/images/JUANJO.png" class="mini-speaker" data-name="JUAN JOSÉ ARENALES" data-role="Especialista en lanzamientos" />
+  <img src="assets/images/PAOLA.png" class="mini-speaker" data-name="PAOLA LUQUE" data-role="Coach de productividad" />
+  <img src="assets/images/SAID.png" class="mini-speaker" data-name="SAID DURÁN" data-role="Copywriter persuasivo" />
 </div>
 
     </div>
@@ -62,5 +91,6 @@
 
   <script src="js/main.js"></script>
   <script src="speakers/speakers.js"></script>
+  <script src="script/modal.js"></script>
 </body>
 </html>
