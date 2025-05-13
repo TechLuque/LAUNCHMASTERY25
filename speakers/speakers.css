@@ -18,7 +18,7 @@
 
 /* Miniaturas de los speakers (círculos a la izquierda) */
 .mini-speaker {
-  width: 130px;
+  width: 100px;
   height: 100%;
   border-radius: 20%;
   /* margin-right: -12px; */
