@@ -50,8 +50,8 @@
 
 /* Imagen grande del speaker */
 .big-speaker {
-  width: 550px;
-  height: 820px;
+  width: 30rem;
+  height: 45rem;
   border-radius: 1.5rem;
   overflow: hidden;
   position: relative;
@@ -103,53 +103,122 @@
   transform: scale(1.05);
 }
 
-/* Responsive */
 
-@media (max-width: 1000px) {
+.carousel-speakers {
+  display: none;
+}
 
-  .speakers-list {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+@media (max-width: 1024px) {
+  .carousel-speakers {
+    display: block;
+    overflow: hidden;
+    width: 100%;
     margin-top: 1rem;
   }
 
-  .mini-speaker {
-    width: 150px;
-    height: 200px;
+  .carousel-track {
+    display: flex;
+    animation: scroll 12s linear infinite;
+    gap: 1rem;
   }
 
-  .central-speaker {
-    max-width: 80vw;
-    margin: 0 auto 2rem;
+  .carousel-track img {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   }
 
-  .central-speaker img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-  }
-}
-
-
-@media (max-width: 800px) {
-
-
-  .mini-speaker {
-    width: 100px;
-    height: 150px;
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
-  .central-speaker {
-    max-width: 80vw;
-    margin: 0 auto 2rem;
+
+
+  /* Asegurarse que el speaker grande se oculte en móvil */
+  #centralSpeaker {
+    display: none;
   }
 
-  .central-speaker img {
-    width: 100%;
-    max-height: 800px;
-    object-fit: contain;
+  .speakers-list {
+    display: none !important;
   }
 }
 
 
+
+/* Responsive */
+/* 
+@media (max-width: 768px) {
+  .central-speaker {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .big-speaker {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(18, 23, 48, 0.8));
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .big-speaker img {
+    width: auto;
+    max-height: 85%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 50px;
+  }
+
+  .speaker-info {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .speaker-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .speaker-info p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .speakers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .mini-speaker {
+    width: 70px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  #centralSpeaker {
+    display: none;
+  }
+
+
+} */
