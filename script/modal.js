@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("email");
   const mensaje = document.getElementById("msg");
 
+
+// Cierra el modal si haces clic fuera del contenido
+
+
   // Polyfill si es necesario
   if (modal && typeof modal.showModal !== "function" && typeof dialogPolyfill !== "undefined") {
     dialogPolyfill.registerDialog(modal);
@@ -59,3 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
