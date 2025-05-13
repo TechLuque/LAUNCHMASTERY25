@@ -7,8 +7,9 @@
   <title>LM 2025</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="speakers/speakers.css" />
-    <link rel="stylesheet" href="header/header.css" />
-      <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="header/header.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/button.css" />
 
       <link rel="stylesheet" href="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.css" />
 <script src="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
@@ -37,8 +38,16 @@
       </p> -->
       
       <div class="buttons">
-        <button class="cta-btn primary"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></button>
-        <button class="cta-btn outline" id="openModalBtn">Ingresar</button>
+        <!-- <button class="cta-btn primary"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></button> -->
+        <button>
+          <span class="text"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></span>
+          <span class="shimmer"></span>
+        </button>
+        <button id="openModalBtn">
+          <span class="text">Ingresar</span>
+          <span class="shimmer"></span>
+        </button>
+        <!-- <button class="cta-btn primary" id="openModalBtn">Ingresar</button> -->
       </div>
 
       <dialog id="launchModal" closedby="any">
