@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(URL_API);
         const data = await res.json();
 
-        const listaCorreos = data.email.map(item => item.email.trim().toLowerCase());
+        // const listaCorreos = data.email.map(item => item.email.trim().toLowerCase());
 
 
-const usuario = data.email.find(item => item.email.trim().toLowerCase() === email);
+      const usuario = data.email.find(item => item.email.trim().toLowerCase() === email);
 
 
-        if (autorizado) {
+        if (usuario) {
           localStorage.setItem("sesionIniciada", "true");
           localStorage.setItem("correo", email);
           localStorage.setItem("nombre", usuario.name); // Guardar el nombre
