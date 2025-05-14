@@ -45,12 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch(URL_API);
         const data = await res.json();
 
-        const listaCorreos = data.email.map(item => item.canal.trim().toLowerCase());
+        const listaCorreos = data.email.map(item => item.email.trim().toLowerCase());
+
+
         const autorizado = listaCorreos.includes(email);
 
         if (autorizado) {
           localStorage.setItem("sesionIniciada", "true");
           localStorage.setItem("correo", email);
+          localStorage.setItem("nombre", user.name); // Guardar el nombre
           modal.close();
           window.location.href = "preview.html";
         } else {

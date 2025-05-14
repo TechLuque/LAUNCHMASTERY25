@@ -7,7 +7,6 @@
 
 
 .card-usu {
-  border: 1px solid salmon;
   display: grid;
   grid-template-columns: 50% 50%;
   /* place-items: center; */
@@ -16,12 +15,25 @@
   /* perspective: 1000px; */
 }
 
+
+.title-preview {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
 .medium {
-  border: 1px solid salmon;
   width: 100%;
   height: 100%;
   display: grid;
   place-items: center;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
 }
 
 .card-front:before {
@@ -49,13 +61,13 @@
   display: grid;
   position: relative;
   transform: translate3d(0, 0, 0.01px);
-  width: 90vw;
-  max-width: 580px;
-  aspect-ratio: 3/2;
+  width: 90vw;       /* tamaños card */
+  max-width: 580px;                 /* tamaños card */
+  aspect-ratio: 3/2;     /* tamaños card */
 
   border-radius: 3.5% 3.5% 3.5% 3.5% / 5% 5% 5% 5%;
 
-  background-image: url(https://simey-credit-card.netlify.app/img/bgs/default.jpg);
+  background-image: url(../assets/images/ChatGPT\ Image\ 14\ may\ 2025\,\ 03_42_53\ p.m..png);
   background-size: cover;
 
   box-shadow: 0 30px 40px -25px rgba(15, 5, 20, 1), 0 20px 50px -15px rgba(15, 5, 20, 1);
@@ -86,11 +98,11 @@
 
 }
 
-.cardLogo,
+/* .cardLogo, */
 .expiry,
 .name,
 .number,
-.chip,
+/* .chip, */
 .icon {
 
   color: #ccc;
@@ -150,7 +162,7 @@
 
 }
 
-.cardLogo {
+/* .cardLogo {
 
   bottom: auto;
   left: auto;
@@ -158,9 +170,9 @@
   filter: invert(1) saturate(0) brightness(1) contrast(1.2);
   mix-blend-mode: screen;
 
-}
+} */
 
-.chip {
+/* .chip {
 
   display: grid;
   place-items: center;
@@ -191,7 +203,7 @@
   stroke: #444;
   stroke-width: 2;
 
-}
+} */
 
 .contactless {
 
@@ -288,8 +300,8 @@ html {
 
 @media (max-width: 1124px) {
   .card-usu {
-  display: flex;
-  flex-direction: column;
-}
+    display: flex;
+    flex-direction: column;
 
+  }
 }
