@@ -48,12 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const listaCorreos = data.email.map(item => item.email.trim().toLowerCase());
 
 
-        const autorizado = listaCorreos.includes(email);
+const usuario = data.email.find(item => item.email.trim().toLowerCase() === email);
+
 
         if (autorizado) {
           localStorage.setItem("sesionIniciada", "true");
           localStorage.setItem("correo", email);
-          localStorage.setItem("nombre", user.name); // Guardar el nombre
+          localStorage.setItem("nombre", usuario.name); // Guardar el nombre
           modal.close();
           window.location.href = "preview.html";
         } else {
