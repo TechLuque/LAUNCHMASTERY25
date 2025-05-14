@@ -48,9 +48,9 @@
   inset: 0;
   position: absolute;
   transform: translate3d(0, 0, 0.01px);
-
+  border-radius: 3.5% 3.5% 3.5% 3.5% / 5% 5% 5% 5%;
   background-image: var(--glitter), var(--glitter),
-    linear-gradient(120deg, black 25%, white, black 75%);
+  linear-gradient(120deg, black 25%, white, black 75%);
   background-size: 100% 100%, 80% 80%, 200% 200%;
   background-blend-mode: multiply, multiply, overlay;
   background-position: 50% 50%, 50% 50%, 50% 50%;
