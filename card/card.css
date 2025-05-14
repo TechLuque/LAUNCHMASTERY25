@@ -302,6 +302,13 @@ html {
   .card-usu {
     display: flex;
     flex-direction: column;
+  }
 
+  .first{
+    flex: 1;
+  }
+
+  .second{
+    flex: 2;
   }
 }
