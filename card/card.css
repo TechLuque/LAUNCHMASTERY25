@@ -305,6 +305,27 @@ html {
 
 
 @media (max-width: 1124px) {
+
+  .logo-image-welcome{
+    max-height: 100px;
+    object-fit: contain;
+    margin-top: 1rem;
+  }
+
+  .medium {
+    align-items: end;
+  }
+
+  main {
+    display: flex;
+    align-items: start;
+
+  }
+
+  .card-front{
+        margin-top: 55px;
+  }
+
   .card-usu {
     display: flex;
     flex-direction: column;
