@@ -208,11 +208,47 @@ a {
   } 
 } */
 
+@media (min-width: 1300px) {
+  /* .overlay {
+    padding: 0 5rem;
+  } */
+
+  .left-column {
+    padding: 0 5rem;
+  }
+
+  .logo-image {
+    max-height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .cta-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .stat-box {
+    font-size: 1.2rem;
+    padding: 0.5rem 2rem;
+  }
+
+}
 
 
 /* ====================== */
 /* RESPONSIVE - TABLET & MOBILE */
 /* ====================== */
+
+
 @media (max-width: 1024px) {
   html, body {
   width: 100%;
