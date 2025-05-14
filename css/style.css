@@ -208,7 +208,7 @@ a {
   } 
 } */
 
-@media (min-width: 1300px) {
+@media (max-width: 1700px) {
   /* .overlay {
     padding: 0 5rem;
   } */
