@@ -36,6 +36,12 @@
   gap: 5%;
 }
 
+.logo-image-welcome{
+  max-height: 200px;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+
 .card-front:before {
 
   content: "";
