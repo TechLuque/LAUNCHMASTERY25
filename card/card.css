@@ -252,7 +252,7 @@
 main {
 
   display: grid;
-  grid-template-rows: minmax(20px,100px) 1fr;
+  /* grid-template-rows: minmax(20px,100px) 1fr; */
   place-items: center;
   min-height: 100%;
   perspective: 1000px;
@@ -305,7 +305,7 @@ html {
   }
 
   .first{
-    flex: 1;
+    flex: 1;  
   }
 
   .second{
