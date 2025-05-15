@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="speakersa/speakersa.css" />
   <link rel="stylesheet" href="cronograma/cronograma.css" />
   <link rel="stylesheet" href="bumper/bumper.css" />
+  <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
   <title>Página Principal</title>
 </head>
 <body>
@@ -21,7 +27,70 @@
     <h2>Auditorio</h2>
   </section>
   <section id="speakers">
-    <h2>Speakers</h2>
+
+<section>
+  <div class="content">
+    <div class="info">
+      <div id="slide-description">
+        <h2 class="speaker-name">Speaker Name</h2>
+        <p class="speaker-description">
+          Join us for a fantastic <span class="movie-night">movie night</span> filled with popcorn,
+          laughter, and great company! Whether you're a fan of thrilling action,
+          heartwarming dramas, or side-splitting comedies, we've got a film lineup to cater to all tastes.
+          Save the date and bring your favorite snacks to make it a memorable evening.
+        </p>
+      </div>
+      <button class="btn">Join</button>
+    </div>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" data-description="Jeyson Prada, a digital entrepreneur, shares his journey and insights on building a successful online business.">
+          <img src="assets/images/jey.jpg" alt="" />
+          <div class="overlay">
+            <h2>Jeyson Prada</h2>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-description="Juanjo Arenales, a digital entrepreneur, shares his journey and insights on building a successful online business.">
+          <img src="assets/images/jUAN.jpg" alt="" />
+          <div class="overlay">
+            <h2>Juanjo Arenales</h2>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-description="Juliana Peña, a digital entrepreneur, shares her journey and insights on building a successful online business.">
+          <img src="assets/images/juli.jpg" alt="" />
+          <div class="overlay">
+            <h2>Juliana Peña</h2>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-description="Paola Luque, a digital entrepreneur, shares her journey and insights on building a successful online business.">
+          <img src="assets/images/pao.jpg" alt="" />
+          <div class="overlay">
+            <h2>Paola Luque</h2>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-description="Said Durán, a digital entrepreneur, shares his journey and insights on building a successful online business.">
+          <img src="assets/images/sa.jpg" alt="" />
+          <div class="overlay">
+            <h2>Said Durán</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="circles">
+    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
+</section>
+
+
+
   </section>
 
 
@@ -121,5 +190,8 @@
   <script src="speakersa/speakersa.js"></script>
   <script src="cronograma/cronograma.js"></script>
   <script src="bumper/bumper.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>
