@@ -23,7 +23,7 @@
   background-color: #111;
   border-radius: 15px;
   overflow: hidden;
-  width: 340px;
+  width: 500px;
   position: relative;
   transition: transform 0.3s;
 }
@@ -65,7 +65,8 @@
 .horario-overlay h3 {
   margin: 0;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 15%;
   font-weight: 700;
 }
 
@@ -88,7 +89,7 @@
 .evento {
   flex: 1;
   text-align: left;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -131,6 +132,15 @@
     .dia h2 {
     font-size: 1rem;
     }
+
+    .evento {
+        font-size: 0.7rem;
+    }
+
+    .horario-overlay h3 {
+        font-size: 1rem;
+    }
+
 
     .ver-horarios {
     padding: 0.5rem;
