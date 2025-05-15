@@ -14,6 +14,35 @@ dialog#launchModal {
   text-align: center;
 }
 
+
+/*Botón de cierre estilo*/
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: 2px solid #6c4eff;
+  color: #6c4eff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 15px;
+}
+
+/* Hover amigable para el usuario */
+.close-btn:hover {
+  background: #6c4eff;
+  color: white;
+}
+
 /* Fondo semi-transparente al abrir el modal */
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.6);
