@@ -48,14 +48,14 @@
     }
 
     /* Sections */
-    section {
+    /* section {
       min-height: 100vh;
-      /* padding: 6rem 2rem 2rem; */
+      padding: 6rem 2rem 2rem; 
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-    }
+    } */
 
     #inicio {
       background: linear-gradient(135deg, var(--primary), var(--secondary));

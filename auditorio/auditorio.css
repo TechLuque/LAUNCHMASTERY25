@@ -1,22 +1,3 @@
-    :root {
-      --bg: #0f0f1a;
-      --primary: #7600ff;
-      --secondary: #00aaff;
-      --text: #fff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
 
     /* Header */
     header {
@@ -54,7 +35,7 @@
       justify-content: center;
       align-items: center;
       font-size: 2rem;
-      margin-top: 35px;
+      /* margin-top: 35px; */
     }
 
     #inicio {
@@ -91,7 +72,7 @@
 
     .hero {
       min-height: 100vh;
-      background-image: url("/assets/images/LMV_BG.webp");
+      /* background-image: url("/assets/images/LMV_BG.webp"); */
       display: flex;
       align-items: center;
       justify-content: center;
