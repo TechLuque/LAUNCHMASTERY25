@@ -94,7 +94,6 @@ section {
 /* SWIPER */
 
 .swiper {
-  border: 1px solid darkblue;
   flex: 1;
   max-width: 400px;
   height: 600px;
@@ -102,7 +101,6 @@ section {
 
 
 .swiper-slide {
-    border: 1px solid rgb(0, 130, 139);
   position: relative;
   aspect-ratio: 3/4; 
   overflow: hidden;
@@ -314,7 +312,7 @@ section {
   #speakers {
     padding: 0;
   }
-  
+
   .content {
     flex-direction: column;
     text-align: center;
