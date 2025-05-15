@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("launchModal");
   const openModalBtn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal");
+  const closeModalBtn = document.getElementById("closeModalBtn");
   const loginBtn = document.getElementById("login");
   const emailInput = document.getElementById("email");
   const mensaje = document.getElementById("msg");
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (closeBtn) {
     closeBtn.addEventListener("click", () => {
+      modal.close();
+    });
+  }
+
+  /*Funcionalidad de boton para cerrar modal*/
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", () => {
       modal.close();
     });
   }
