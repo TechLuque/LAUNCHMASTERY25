@@ -1,205 +1,286 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
 
-    /* Header */
+:root {
+  --card-height: 260px; /* Igual al alto del principal */
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111827cc;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+header a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+}
+
+header a:hover {
+    background: var(--primary);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* margin-top: 35px; */
+}
+
+#inicio {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+#nosotros {
+    background: #1a1a2e;
+}
+
+#servicios {
+    background: #16213e;
+}
+
+#contacto {
+    background: #0f3460;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #111827cc;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-    }
-
-    header a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      transition: background 0.3s;
-    }
-
-    header a:hover {
-      background: var(--primary);
-    }
-
-    /* Sections */
-    section {
-      min-height: 100vh;
-      padding: 6rem 2rem 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      /* margin-top: 35px; */
-    }
-
-    #inicio {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-    }
-
-    #nosotros {
-      background: #1a1a2e;
-    }
-
-    #servicios {
-      background: #16213e;
-    }
-
-    #contacto {
-      background: #0f3460;
-    }
-
-    /* Responsive nav */
-    @media (max-width: 768px) {
-      header {
         flex-wrap: wrap;
         gap: 1rem;
-      }
+    }
 
-      section {
+    section {
         font-size: 1.5rem;
         padding: 6rem 1rem 2rem;
-      }
     }
+}
 
 
-    /* Auditorio */
+/* Auditorio */
 
-    .hero {
-      min-height: 100vh;
-      /* background-image: url("/assets/images/LMV_BG.webp"); */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: rgb(255, 255, 255);
-      padding: 2rem;
-    }
+.hero {
+    min-height: 100vh;
+    /* background-image: url("/assets/images/LMV_BG.webp"); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+}
 
-    .hero-content {
-      max-width: 900px;
-    }
+.hero-content {
+    max-width: 900px;
+}
 
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
 
-    .hero .subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-    /* Contador */
+/* Contador */
 
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
 
-    .countdown-item {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
-      min-width: 100px;
-    }
+.countdown-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100px;
+}
 
-    .countdown-item span {
-      font-size: 2.5rem;
-      font-weight: 700;
-      display: block;
-    }
+.countdown-item span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+}
 
-    .countdown-item label {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-    }
+.countdown-item label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
 
-    /* Cards */
+/* Cards */
 /* Contenedor de todo el layout de cards */
 .auditorio-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 3rem;
 }
 
 /* 🔷 Botón grande: Auditorio Principal */
 .grid-button.principal {
-  width: 100%;
-  height: 260px; /* Cambia este valor para ajustar el tamaño */
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    width: 100%;
+    height: var(--card-height);
+    background: #191c29;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px;
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
 }
 
+
+.grid-button.principal::before,
+.grid-button.principal::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 12px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
+    animation: spin 2.5s linear infinite;
+}
+
+.grid-button.principal::before {
+    width: 102%;
+    height: 101%;
+    top: -1%;
+    left: -1%;
+}
+
+.grid-button.principal::after {
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    filter: blur(30px);
+    opacity: 1;
+    transform: scale(0.9);
+    transition: opacity 0.5s;
+}
+
+
+
 .grid-button.principal .inner {
-  background: #0d0d18;
-  color: var(--text);
-  padding: 2rem;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+    background: #0d0d18;
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* 🔷 Fila de botones secundarios */
 .secundarios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    width: 100%;
 }
 
 /* 🔷 Cada botón secundario */
 .secundarios .grid-button {
-  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada */
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    aspect-ratio: 1 / 1;
+    background: #191c29;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.secundarios .grid-button::before,
+.secundarios .grid-button::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 12px;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
+    animation: spin 2.5s linear infinite;
+}
+
+.secundarios .grid-button::before {
+    width: 104%;
+    height: 102%;
+    top: -2%;
+    left: -2%;
+}
+
+.secundarios .grid-button::after {
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    filter: blur(25px);
+    opacity: 1;
+    transform: scale(0.9);
+    transition: opacity 0.5s;
 }
 
 .secundarios .grid-button:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .secundarios .grid-button .inner {
-  background: #0d0d18;
-  color: var(--text);
-  padding: 1.5rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+    background: #0d0d18;
+    color: var(--text);
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
 
 /* 🔧 Responsive opcional */
 @media (max-width: 600px) {
-  .grid-button.principal {
-    height: 200px;
-  }
+    .grid-button.principal {
+        height: 200px;
+    }
 }
