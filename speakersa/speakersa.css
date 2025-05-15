@@ -94,15 +94,17 @@ section {
 /* SWIPER */
 
 .swiper {
+  border: 1px solid darkblue;
   flex: 1;
   max-width: 400px;
-  height: 550px;
+  height: 600px;
 }
 
 
 .swiper-slide {
+    border: 1px solid rgb(0, 130, 139);
   position: relative;
-  aspect-ratio: 3/4; /* proporción vertical natural para retrato */
+  aspect-ratio: 3/4; 
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -309,6 +311,10 @@ section {
 
 
 @media (max-width: 800px) {
+  #speakers {
+    padding: 0;
+  }
+  
   .content {
     flex-direction: column;
     text-align: center;
@@ -316,15 +322,21 @@ section {
     justify-content: center;
   }
 
+    .swiper {
+    width: 50vw;
+    max-width: 300px;
+  }
+
+  
   .swiper-slide {
-      position: relative;
-      aspect-ratio: 2/2;
-      overflow: hidden;
+      /* position: relative; */
+      aspect-ratio: 2/3;
+      /* overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 12px;
-    }
+      border-radius: 12px; */
+    } 
 
   .swiper-slide img {
    width: 100%;
@@ -333,7 +345,7 @@ section {
     object-position: top center;
     position: relative;
     border-radius: 10px;
-  }
+  } */
 
   .speaker-description {
     font-size: 1rem;
@@ -360,18 +372,15 @@ section {
     margin-top: 20px;
   }
 
-  .swiper {
-    width: 90vw;
-    max-width: 380px;
-  }
 
-  .swiper-slide {
+
+  /* .swiper-slide {
     border-radius: 12px;
   }
 
   .overlay h2 {
     font-size: 1rem;
     margin-bottom: 10px;
-  }
+  } */
 }
 
