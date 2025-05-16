@@ -1,0 +1,202 @@
+
+/* Particle Background */
+#particle-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* background: url('https://www.transparenttextures.com/patterns/dark-matter.png'); */
+  animation: particleAnimation 30s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes particleAnimation {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  padding: 10px 20px;
+  backdrop-filter: blur(15px);
+  width: fit-content;
+  max-width: 90vw;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+}
+
+
+.nav-item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+/* Toggle button styling */
+.toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #ff00cc;
+  transform: rotate(90deg);
+}
+
+/* Nav item styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  padding: 10px 20px;
+  backdrop-filter: blur(15px);
+  width: fit-content;
+  max-width: 90vw;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+}
+
+.nav-item i {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffffff;
+}
+
+/* Hover effect with gradient */
+.nav-item:hover {
+  background: linear-gradient(135deg, rgba(255, 0, 204, 0.4), rgba(51, 51, 255, 0.4));
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Active effect with glow and scale */
+.nav-item.active {
+  background: rgba(255, 0, 204, 0.25);
+  color: #ff00cc;
+  box-shadow: 0px 0px 30px rgba(255, 0, 204, 0.8);
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 20px rgba(255, 0, 204, 0.8);
+  }
+  100% {
+    box-shadow: 0px 0px 40px rgba(255, 0, 204, 1);
+  }
+}
+
+.nav-item.active i {
+  transform: scale(1.8);
+  color: #ff00cc;
+}
+
+/* Tooltip styling */
+.nav-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #ffffff;
+  background: rgba(30, 30, 30, 0.85);
+  padding: 8px 12px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  z-index: 3;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Tooltip visible on hover */
+.nav-item:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Tooltip triangle */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(30, 30, 30, 0.85) transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: linear-gradient(45deg, #ff0000, #ff4d4d);
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 4px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: pulse 1.8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+  }
+}
+
+/* Selection Indicator */
+.selection-indicator {
+  position: absolute;
+  bottom: 10px;
+  height: 4px;
+  width: 30px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  border-radius: 2px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: -1;
+}
+
+.nav-item.active ~ .selection-indicator {
+  width: 40px; /* Adjust indicator width for active item */
+}
+
+/* Icon hover adjustments */
+.nav-item:not(.active):hover i {
+  color: #1de9b6;
+  transform: scale(1.2);
+}

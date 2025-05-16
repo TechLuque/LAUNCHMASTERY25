@@ -8,21 +8,35 @@
   <link rel="stylesheet" href="cronograma/cronograma.css" />
   <link rel="stylesheet" href="bumper/bumper.css" />
   <link rel="stylesheet" href="auditorio/auditorio.css" />
+  <link rel="stylesheet" href="headera/headera.css" />
 
-  <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <title>Página Principal</title>
 </head>
 <body>
   <header>
+<!-- Navbar siempre expandida -->
+<div class="navbar">
+  <div class="nav-item active" data-tooltip="Auditorio">
     <a href="#auditorio">Auditorio</a>
+  </div>
+  <div class="nav-item" data-tooltip="Speakers">
     <a href="#speakers">Speakers</a>
+  </div>
+  <div class="nav-item" data-tooltip="Cronograma">
     <a href="#cronograma">Cronograma</a>
-    <a href="#bumper Offer">Bumper Offer</a>
+  </div>
+  <div class="nav-item" data-tooltip="Bumper Offer">
+    <a href="#bumper">Bumper Offer</a>
+  </div>
+
+  <div class="selection-indicator"></div>
+</div>
+
+
+
   </header>
 
   <section id="auditorio">
@@ -236,6 +250,7 @@
   <script src="speakersa/speakersa.js"></script>
   <script src="cronograma/cronograma.js"></script>
   <script src="bumper/bumper.js"></script>
+  <script src="headera/header.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="script/preview.js"></script>
