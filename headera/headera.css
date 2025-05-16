@@ -182,17 +182,21 @@
 /* Selection Indicator */
 .selection-indicator {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   height: 4px;
-  width: 30px;
+  width: 60px;
   background: linear-gradient(90deg, #ff00cc, #3333ff);
   border-radius: 2px;
   transition: transform 0.3s ease, width 0.3s ease;
-  z-index: -1;
+  transform: translateX(0);
+  left: 0;
+  z-index: 1;
 }
 
 .nav-item.active ~ .selection-indicator {
-  width: 40px; /* Adjust indicator width for active item */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Adjust indicator width for active item */
 }
 
 /* Icon hover adjustments */

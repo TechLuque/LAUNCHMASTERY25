@@ -256,5 +256,40 @@
     <script type="module" src="script/preview.js"></script>
     <script type="module" src="js/main.js"></script>
 
+  <script>
+  // Script para actualizar la posición del indicador al hacer clic en los elementos de navegación
+  document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-item');
+    const indicator = document.querySelector('.selection-indicator');
+    
+    // Establecer la posición inicial del indicador
+    updateIndicatorPosition();
+    
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        // Eliminar la clase active de todos los elementos
+        navItems.forEach(i => i.classList.remove('active'));
+        
+        // Añadir la clase active al elemento clicado
+        this.classList.add('active');
+        
+        // Actualizar la posición del indicador
+        updateIndicatorPosition();
+      });
+    });
+    
+    function updateIndicatorPosition() {
+      const activeItem = document.querySelector('.nav-item.active');
+      if (activeItem) {
+        // Mover el indicador debajo del elemento activo
+        indicator.style.width = `${activeItem.offsetWidth - 20}px`;
+        indicator.style.transform = `translateX(0)`;
+        indicator.style.left = `${activeItem.offsetLeft + activeItem.offsetWidth/2}px`;
+        indicator.style.transform = `translateX(-50%)`;
+      }
+    }
+  });
+</script>
 </body>
+
 </html>
