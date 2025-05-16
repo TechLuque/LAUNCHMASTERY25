@@ -43,9 +43,9 @@
       transition: background 0.3s;
     }
 
-    header a:hover {
+    /* header a:hover {
       background: var(--primary);
-    }
+    } */
 
     /* Sections */
     /* section {

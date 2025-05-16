@@ -109,7 +109,7 @@
 }
 
 /* Tooltip styling */
-.nav-item::before {
+/* .nav-item::before {
   content: attr(data-tooltip);
   position: absolute;
   bottom: -45px;
@@ -126,16 +126,16 @@
   z-index: 3;
   backdrop-filter: blur(8px);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-}
+} */
 
 /* Tooltip visible on hover */
-.nav-item:hover::before {
+/* .nav-item:hover::before {
   opacity: 1;
   transform: translateX(-50%) translateY(-8px);
-}
+} */
 
 /* Tooltip triangle */
-.nav-item::after {
+/* .nav-item::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -147,11 +147,11 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 3;
-}
+} */
 
-.nav-item:hover::after {
+/* .nav-item:hover::after {
   opacity: 1;
-}
+} */
 
 /* Notification Badge */
 .notification-badge {
@@ -188,15 +188,65 @@
   background: linear-gradient(90deg, #ff00cc, #3333ff);
   border-radius: 2px;
   transition: transform 0.3s ease, width 0.3s ease;
-  transform: translateX(0);
-  left: 0;
   z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
+  filter: brightness(1.2);
+  animation: glowPulse 2s infinite alternate ease-in-out;
 }
 
-.nav-item.active ~ .selection-indicator {
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 204, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 204, 1);
+  }
+}
+
+.nav-item {
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.nav-item.active {
+  background: rgba(255, 0, 204, 0.25);
+  color: #ff00cc;
+  box-shadow: 0px 0px 30px rgba(255, 0, 204, 0.8);
+  animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+/* .nav-item.active ~ .selection-indicator {
   left: 50%;
   transform: translateX(-50%);
   width: 60px; /* Adjust indicator width for active item */
+
+
+  .selection-indicator {
+  position: absolute;
+  bottom: 5px;
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 0, 204, 0.7);
+  filter: brightness(1.2);
+  animation: glowPulse 2s infinite alternate ease-in-out;
+  /* Elimina cualquier left o transform aquí */
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 204, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 0, 204, 1);
+  }
 }
 
 /* Icon hover adjustments */
