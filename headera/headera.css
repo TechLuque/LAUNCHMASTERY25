@@ -20,10 +20,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 40px;
   padding: 10px 20px;
-  backdrop-filter: blur(15px);
   width: fit-content;
   max-width: 90vw;
   margin: auto;
@@ -62,7 +60,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
   border-radius: 40px;
   padding: 10px 20px;
   backdrop-filter: blur(15px);
@@ -108,50 +105,6 @@
   color: #ff00cc;
 }
 
-/* Tooltip styling */
-/* .nav-item::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: #ffffff;
-  background: rgba(30, 30, 30, 0.85);
-  padding: 8px 12px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  pointer-events: none;
-  z-index: 3;
-  backdrop-filter: blur(8px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-} */
-
-/* Tooltip visible on hover */
-/* .nav-item:hover::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-8px);
-} */
-
-/* Tooltip triangle */
-/* .nav-item::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgba(30, 30, 30, 0.85) transparent transparent transparent;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 3;
-} */
-
-/* .nav-item:hover::after {
-  opacity: 1;
-} */
 
 /* Notification Badge */
 .notification-badge {
@@ -223,15 +176,10 @@
   animation: glow 1.5s infinite alternate ease-in-out;
 }
 
-/* .nav-item.active ~ .selection-indicator {
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px; /* Adjust indicator width for active item */
-
 
   .selection-indicator {
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   height: 4px;
   width: 60px;
   background: linear-gradient(90deg, #ff00cc, #3333ff);
