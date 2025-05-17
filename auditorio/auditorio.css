@@ -22,34 +22,14 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1rem;
     /* margin-top: 35px; */
 }
 
-#inicio {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-}
 
-#nosotros {
-    background: #1a1a2e;
-}
-
-#servicios {
-    background: #16213e;
-}
-
-#contacto {
-    background: #0f3460;
-}
 
 /* Responsive nav */
-@media (max-width: 768px) {
 
-    section {
-        font-size: 1.5rem;
-        padding: 6rem 1rem 2rem;
-    }
-}
 
 
 /* Auditorio */
@@ -141,22 +121,23 @@ section {
     content: "";
     position: absolute;
     z-index: -1;
-    top: -1%;
-    left: -1%;
+    /* top: -1%;
+    left: -1%; */
     width: 102%;
     height: 102%;
-    background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
+    background-image: linear-gradient(var(--rotate), #00aaff, #4e00c2);
     border-radius: 14px;
     animation: spin 3s linear infinite;
 }
 
 
 .grid-button.principal::before {
-    width: 102%;
-    height: 101%;
-    top: -1%;
-    left: -1%;
+    width: 100%;
+    height: 100%;
+    /* top: -1%;
+    left: -1%; */
 }
+
 .grid-button.principal::after {
   content: "";
   position: absolute;
@@ -167,7 +148,7 @@ section {
   width: 100%;
   height: 100%;
   margin: auto;
-  background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
+  background-image: linear-gradient(var(--rotate), #5ddcff, #4e00c2);
   transform: scale(1);
   opacity: 1;
   animation: spin 3s linear infinite;
@@ -178,6 +159,8 @@ section {
 
 
 .grid-button.principal .inner {
+    display: flex;
+    flex-direction: column;
     background: #0d0d18;
     color: var(--text);
     padding: 2rem;
@@ -217,32 +200,29 @@ section {
     position: absolute;
     z-index: -1;
     border-radius: 12px;
-    background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
-    animation: spin 2.5s linear infinite;
+    background-image: linear-gradient(var(--rotate), #7700ff, #bc02d8,  #0d0d18, #0d0d18, #0d0d18, #0d0d18);
+    animation: spin 3s linear infinite;
 }
 
 .secundarios .grid-button::before {
-    width: 104%;
-    height: 102%;
-    top: -2%;
-    left: -2%;
+    width: 100%;
+    height: 100%;
+
 }
 
-.secundarios .grid-button::after {
+/* .secundarios .grid-button::after {
   content: "";
   position: absolute;
   z-index: -2;
-  top: 0;
-  left: 0;
-  right: 0;
+
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(var(--rotate), #5ddcff, #bc02d8 43%, #4e00c2);
+  background-image: linear-gradient(var(--rotate), #0d0d18, #7600ff, #0d0d18);
   transform: scale(1);
   opacity: 1;
   animation: spin 2.5s linear infinite;
-  filter: none; /* 👈 importante */
-}
+  filter: none; 
+} */
 
 
 .secundarios .grid-button:hover {
@@ -250,6 +230,8 @@ section {
 }
 
 .secundarios .grid-button .inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     background: #0d0d18;
     color: var(--text);
     padding: 1.5rem;
@@ -271,6 +253,9 @@ section {
     }
 }
 
+
+
+
 /* 🔧 Responsive opcional */
 @media (max-width: 600px) {
     .grid-button.principal {
@@ -285,4 +270,14 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    section {
+        font-size: 1.5rem;
+        padding: 6rem 1rem 2rem;
+    }
 }
