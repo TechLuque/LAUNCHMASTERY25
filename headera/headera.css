@@ -222,17 +222,17 @@
     display: none;
   }
 
-  .nav-item i{
-  display: block;
-  font-size: 1.8rem;
-  }
+    .nav-item i{
+    display: block;
+    font-size: 1.8rem;
+    }
 
-  .nav-item {
-  padding: 0 10px;
-  border-radius: 15ppx;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  text-align: center;
-}
+    .nav-item {
+    padding: 0 10px;
+    border-radius: 15ppx;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+  }
 }
