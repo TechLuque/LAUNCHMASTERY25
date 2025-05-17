@@ -11,30 +11,6 @@
 }
 
 
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #111827cc;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-}
-
-header a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: background 0.3s;
-}
-
 /* header a:hover {
     background: var(--primary);
 } */
@@ -68,10 +44,6 @@ section {
 
 /* Responsive nav */
 @media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
 
     section {
         font-size: 1.5rem;
