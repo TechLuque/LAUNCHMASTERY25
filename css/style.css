@@ -1,20 +1,16 @@
-/* Estilos generales */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:wght@788&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
 body, html {
   height: 100%;
   margin: 0;
-  font-family: sans-serif;
   color: white;
   background: url('../assets/images/BG_\ LM\ 6.png') no-repeat center center fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
-  font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 

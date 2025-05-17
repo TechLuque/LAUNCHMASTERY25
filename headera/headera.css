@@ -227,6 +227,11 @@
     font-size: 1.8rem;
     }
 
+    .nav-item.active i {
+    transform: scale(1.2);
+    /* color: #ff00cc; */
+  }
+
     .nav-item {
     padding: 0 10px;
     border-radius: 15ppx;
