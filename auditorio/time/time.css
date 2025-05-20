@@ -8,7 +8,9 @@
 .countdown-item {
     display: flex;
     flex-direction: column;
-    background: #1c1c38;
+    background: rgba(0, 0, 0, 0.103); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 1rem;
     border-radius: 10px;
     min-width: 100px;
