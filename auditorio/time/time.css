@@ -1,28 +1,27 @@
-
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
 }
 
 .countdown-item {
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
+    background: #1c1c38;
     padding: 1rem;
     border-radius: 10px;
     min-width: 100px;
 }
 
 .countdown-item span {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     display: block;
 }
 
 .countdown-item label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
