@@ -16,14 +16,28 @@
 } */
 
 /* Sections */
-section {
+section{
     min-height: 100vh;
     /* padding: 6rem 2rem 2rem; */
     display: flex;
     justify-content: center;
+  background-color: #0f0f1a !important; /* fondo más pro */
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
     align-items: center;
     font-size: 1rem;
     /* margin-top: 35px; */
+}
+
+#auditorio {
+    background: url('../assets/images/BG_\ LM.png') no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    font-size: 1rem;
 }
 
 
