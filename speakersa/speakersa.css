@@ -106,7 +106,7 @@
 .swiper-slide {
   position: relative;
   aspect-ratio: 3/4; 
-  overflow: hidden;
+  overflow: clip;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +153,8 @@
   background: rgba(255, 255, 255, 0.095);
   box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.2),
     inset -3px 3px 3px rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(74px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .overlay h2 {
