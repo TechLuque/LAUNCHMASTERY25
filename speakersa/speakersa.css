@@ -390,3 +390,25 @@
     margin-bottom: 10px;
   } */
 }
+
+
+
+@media (max-width: 600px) {
+        .horario-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+
+    .horario-overlay h3 {
+      font-size: 1.1rem;
+      padding: 0 14%;
+}
+
+
+.bloque {
+    width: 90%;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+    padding: 0.5rem 1.2rem;
+    gap: 1.5rem;
+}
+}
