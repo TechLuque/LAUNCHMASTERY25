@@ -111,6 +111,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 12px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .swiper-slide img {

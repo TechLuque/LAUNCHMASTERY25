@@ -176,20 +176,65 @@ section{
 }
 
 
+.video-container {
+  border: 5px solid transparent;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* evita que el video sobresalga */
+}
 
+.video-bg {
+  /* border: 4px solid transparent; */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+  /* background: rgba(13, 13, 24, 0.733); mejora legibilidad */
+  /* filter: blur(2px); 🎯 Aplica desenfoque directamente al video */
+}
 
 .grid-button.principal .inner {
-    display: flex;
-    flex-direction: column;
-    background: #0d0d18;
-    color: var(--text);
-    padding: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-weight: bold;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
 }
+
+
+.grid-button.principal .inner-two {
+
+  position: absolute; /* 👈 Necesario para estar encima */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(13, 13, 24, 0.589); 
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: var(--text);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
 
 /* 🔷 Fila de botones secundarios */
 .secundarios {
