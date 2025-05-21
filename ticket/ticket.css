@@ -177,7 +177,7 @@ Supabase Ticket URL: https://supabase.com/special-announcement/tickets/gambhirsh
 html {
   --zoom: 120;
   --green: #753799;
-  --neon: #3ecf8e;
+  --neon: #ff00ea;
 }
 :root {
   --unit: 1vmin;
@@ -277,7 +277,7 @@ a {
   background-size: 200% 200%;
   background-position: var(--p) var(--p);
   z-index: 5;
-  opacity: calc(var(--o) + 0.5);
+  opacity: calc(var(--o));
   pointer-events: none;
 }
 
