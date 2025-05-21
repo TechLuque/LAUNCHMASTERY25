@@ -39,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  gap: 5rem;
 }
 
 .logo-image-welcome{
@@ -235,6 +235,7 @@ a {
   transform: translate3d(0, 0, 0.1px) scale(var(--scale)) rotateY(var(--r));
   transform-style: preserve-3d;
   pointer-events: auto;
+  perspective: 1500px;
 }
 
 .front,
@@ -258,6 +259,7 @@ a {
   mask-size: cover;
   mask-repeat: no-repeat;
   height: calc(420 * var(--px));
+  
 }
 .cutout {
   position: absolute;
@@ -280,6 +282,9 @@ a {
   opacity: calc(var(--o));
   pointer-events: none;
 }
+
+
+
 
 .front {
   transform: rotateY(180deg) translateZ(1px);
