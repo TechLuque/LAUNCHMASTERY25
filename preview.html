@@ -7,7 +7,8 @@
   <title>LM 2025</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="header/header.css" />
-  <link rel="stylesheet" href="card/card.css" />
+  <!-- <link rel="stylesheet" href="card/card.css" /> -->
+  <link rel="stylesheet" href="ticket/ticket.css" />
 </head>
 <body>
     <!-- Menú superior -->
@@ -36,7 +37,32 @@
       
     </div>
     <div class="medium second">
-          <main id=app>
+          <main id="app">
+            <section class="ticket">
+              <header class="front">
+                <div class="holo"></div>
+                <img class="logo" src="https://res.cloudinary.com/dpphcu4gm/image/upload/v1712992262/full-logo_bdbltu.png" alt="" />
+                <aside class="divider"></aside>
+              </header>
+              <section class="back">
+                <div class="holo"></div>
+                <p id="id_number">NO 00004521</p>
+                <div class="data">
+                  <p class="name">gambhir⚡</p>
+                  <p class="githubid">@gambhirsharma</p>
+                  <p></p>
+                </div>
+                <aside class="divider">
+                  <div>
+                    <img src="https://res.cloudinary.com/dpphcu4gm/image/upload/v1712992245/logo_ycu0zf.svg" alt="" />
+                    <h3>Junio 9, 10 y 11 <BR> 9AM Hor Col.</h2>
+                  </div>
+                </aside>
+              </section>
+            </section>
+          </main>
+
+          <!-- <main id=app>
     
       
       <aside class="card-front">
@@ -49,21 +75,21 @@
         <label class="expiry" for="expiryMonth" >
           09/06
         </label>
-        <!-- <img class="cardLogo" data-v-5d206127="" data-v-8fcb32d4="" style="opacity: 1;" src="https://simey-credit-card.netlify.app/img/logos/master.svg"> -->
+        <img class="cardLogo" data-v-5d206127="" data-v-8fcb32d4="" style="opacity: 1;" src="https://simey-credit-card.netlify.app/img/logos/master.svg"> 
         
           
-        <!-- <div class="chip">
+         <div class="chip">
           <svg role="img" viewBox="0 0 100 100" aria-label="Chip">
             <use href="#chip-lines" />
           </svg>
-        </div> -->
+        </div> 
         <svg class="contactless" role="img" viewBox="0 0 24 24" aria-label="Contactless">
           <use href="#contactless">
         </svg>
         
       </aside>
       
-    </main>
+    </main> -->
 
 
 
@@ -94,10 +120,18 @@
 
 
   <script src="js/main.js"></script>
-  <script src="card/card.js"></script>
+  <!-- <script src="card/card.js"></script> -->
 
   <!-- <script src="speakers/speakers.js"></script>
   <script src="script/modal.js"></script> -->
   <script type="module" src="script/preview.js"></script>
+  <script type="module"  src="ticket/ticket.js"></script>
 </body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <script>
+
+  </script>
 </html>

@@ -1,15 +1,16 @@
 /* Estilo base del dialog */
 dialog#launchModal {
-  width: 90%;
+  /* width: 90%; */
   max-width: 400px;
   padding: 2rem;
   border: none;
   border-radius: 1rem;
-  background: rgba(10, 10, 25, 0.85);
+  background: rgba(10, 10, 25, 0.459);
   color: white;
-  font-family: sans-serif;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
+  /* font-family: sans-serif; */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.199);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
   animation: fadeInScale 0.4s ease;
   text-align: center;
 }
@@ -21,9 +22,9 @@ dialog#launchModal {
   position: absolute;
   top: 8px;
   right: 10px;
-  background: transparent;
+  background: rgba(10, 10, 25, 0.85);
   border: 2px solid #6c4eff;
-  color: #6c4eff;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 500;
   border-radius: 50%;
@@ -57,19 +58,24 @@ dialog#launchModal h2 {
 }
 
 dialog#launchModal p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  margin: 1rem 1.5rem;
   color: #ccc;
 }
 
 /* Botón dentro del formulario */
 dialog#launchModal form button {
-  background: transparent;
+  /* background: transparent; */
+  background-image: linear-gradient(
+    315deg,
+    #00aaff -10%,
+    #7600ff  50%
+  );
   border: 2px solid #6c4eff;
-  color: #6c4eff;
+  color: #ffffff;
   font-weight: bold;
   padding: 0.6rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -90,15 +96,13 @@ dialog#launchModal form button:hover {
     transform: scale(1);
   }
 }
-
-
 /* Campo de texto */
 .modal-input {
   width: 80%;
   padding: 0.9rem 1rem;
   border-radius: 8px;
   border: none;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   font-size: 1rem;
   background-color: #ffffff15;
   color: white;
@@ -113,8 +117,10 @@ dialog#launchModal form button:hover {
 
 /* Contenedor de botones */
 .modal-actions {
-
-  padding: 0.9rem 1rem;
+  margin: auto;
+  /* border: 1px solid darkblue; */
+  width: 90%;
+  padding: 1.5rem 0 0 0;
   display: flex;
   justify-content: space-between;
   gap: 1rem;

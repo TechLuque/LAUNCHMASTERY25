@@ -21,3 +21,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error al cargar los datos:", err);
   }
 });
+

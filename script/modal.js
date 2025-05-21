@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
           modal.close();
           window.location.href = "preview.html";
         } else {
-          mensaje.innerText = "Correo no autorizado.";
+          mensaje.innerText = "!UPS! parece que hubo un error.";
         }
       } catch (error) {
         console.error(error);
