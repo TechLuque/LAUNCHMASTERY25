@@ -418,6 +418,7 @@
 
   .swiper .swiper-wrapper .swiper-slide {
     width:300px !important;
+    height: 200px !important;
   }
 
 
