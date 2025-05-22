@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const swiper = new Swiper(".swiper", {
     effect: "cards",
+    autoHeight: false,  // agregado
     grabCursor: true,
     initialSlide: 0,
     speed: 500,
