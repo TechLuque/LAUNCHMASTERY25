@@ -383,6 +383,7 @@
   .speaker-name {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    padding-top: 28px;
   }
 
   .speaker-description {
