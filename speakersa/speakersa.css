@@ -425,29 +425,12 @@
 
  
 
-  .speaker-info h4 {
-    font-size: 1rem;
-  }
 
-  .speaker-info p {
-    font-size: 0.9rem;
-  }
 
   .swiper {
     max-width: 90%;
   }
 
-  /* .swiper.swiper-cards{
-    width: 200px !important;
-    height:0px !important;
-  } */
-
-
-  /* .swiper-slide {
-    height: 100px !important; 
-    padding: 1px; 
-    font-size: 16px;
-  } */
 
 
   .mini-speaker {
