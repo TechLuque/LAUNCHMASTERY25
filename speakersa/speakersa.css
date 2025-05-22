@@ -432,7 +432,7 @@
 
 
   .swiper-slide {
-    height: 5px !important;  /* O menos, dependiendo de lo que viste en el iPhone */
+    height: 100px !important;  /* O menos, dependiendo de lo que viste en el iPhone */
     padding: 1px; /* Agrega más espacio interno si hace falta */
     font-size: 16px;
   }
