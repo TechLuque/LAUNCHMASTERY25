@@ -431,11 +431,11 @@
   }
 
 
-  .swiper-slide {
-    height: 100px !important;  /* O menos, dependiendo de lo que viste en el iPhone */
-    padding: 1px; /* Agrega más espacio interno si hace falta */
+  /* .swiper-slide {
+    height: 100px !important; 
+    padding: 1px; 
     font-size: 16px;
-  }
+  } */
 
 
   .mini-speaker {
