@@ -418,8 +418,8 @@
   }
 
   .swiper .swiper-wrapper .swiper-slide {
-    /* width:350px !important;
-    height: 350px !important; */
+    width:350px !important;
+    height: 400px !important;
     aspect-ratio: 2/3;
   }
 
