@@ -10,6 +10,20 @@
     /* font-family: 'Montserrat'; */
 }
 
+.swiper {
+  width: 100%;
+  max-width: 600px; /* ajusta si quieres limitarlo */
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: auto; /* importante para que crezca con el contenido */
+}
+
 #speakers {
   overflow: hidden;
   width: 100vw;

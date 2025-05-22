@@ -166,6 +166,19 @@
 
 
 
+/*Agregado*/
+@media (max-width: 768px) {
+  .swiper {
+    max-width: 90%;
+  }
+
+  .swiper-slide {
+    font-size: 16px;
+  }
+}
+
+
+
 /* Responsive */
 /* 
 @media (max-width: 768px) {

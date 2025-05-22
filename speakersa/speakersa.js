@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+  
+
   // Inicializar valores
   const initialSlide = document.querySelector(".swiper-slide-active");
   const initialDesc = initialSlide?.getAttribute("data-description") || "";
