@@ -171,44 +171,6 @@
 
 
 
-/*Agregado*/
-@media (max-width: 768px) {
-  .big-speaker {
-    /* width: 90%;
-    max-width: 320px;
-    height: auto; */
-    /* aspect-ratio: 2 / 3; */
-  }
-
-  .big-speaker img{
-    max-height: 80%;
-  }
-
-  .speaker-info h4 {
-    font-size: 1rem;
-  }
-
-  .speaker-info p {
-    font-size: 0.9rem;
-  }
-
-  .swiper {
-    max-width: 90%;
-  }
-
-  .swiper-slide {
-    font-size: 16px;
-    height: 5px !important;
-  }
-
-  .mini-speaker {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  }
-}
-
-
 
 /* Responsive */
 /* 
