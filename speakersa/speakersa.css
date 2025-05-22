@@ -410,7 +410,7 @@
   .big-speaker {
     width: 90%;
     max-width: 320px;
-    height: auto;
+    height: 300px !important ;
     aspect-ratio: 2 / 3;
   }
 
@@ -429,13 +429,6 @@
   .swiper {
     max-width: 90%;
   }
-
-
-  /* .swiper-slide {
-    height: 100px !important; 
-    padding: 1px; 
-    font-size: 16px;
-  } */
 
 
   .mini-speaker {
