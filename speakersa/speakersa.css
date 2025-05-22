@@ -405,5 +405,45 @@
   } */
 }
 
+/*Agregado*/
+@media (max-width: 768px) {
+  .big-speaker {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .big-speaker img{
+    max-height: 80%;
+  }
+
+  .speaker-info h4 {
+    font-size: 1rem;
+  }
+
+  .speaker-info p {
+    font-size: 0.9rem;
+  }
+
+  .swiper {
+    max-width: 90%;
+  }
+
+
+  .swiper-slide {
+    height: 5px !important;  /* O menos, dependiendo de lo que viste en el iPhone */
+    padding: 1px; /* Agrega más espacio interno si hace falta */
+    font-size: 16px;
+  }
+
+
+  .mini-speaker {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  }
+}
+
 
 
