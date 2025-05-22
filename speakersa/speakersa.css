@@ -340,6 +340,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    gap:20px;
   }
 
     .swiper {
@@ -417,12 +418,13 @@
   }
 
   .swiper .swiper-wrapper .swiper-slide {
-    width:350px !important;
-    height: 350px !important;
+    /* width:350px !important;
+    height: 350px !important; */
     aspect-ratio: 2/3;
   }
 
 
+ 
 
   .speaker-info h4 {
     font-size: 1rem;
