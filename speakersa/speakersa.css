@@ -418,6 +418,8 @@
     max-height: 80%;
   }
 
+
+
   .speaker-info h4 {
     font-size: 1rem;
   }
@@ -428,6 +430,11 @@
 
   .swiper {
     max-width: 90%;
+  }
+
+  .swiper.swiper-cards{
+    width: 250px !important;
+    height:300px !important;
   }
 
 
