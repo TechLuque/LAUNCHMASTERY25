@@ -1,3 +1,6 @@
+/* ================================
+   Variables & Custom Properties
+   ================================ */
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
@@ -10,23 +13,18 @@
     --card-width: calc(var(--card-height) / 1.5);
 }
 
-
-/* header a:hover {
-    background: var(--primary);
-} */
-
-/* Sections */
-section{
+/* ================================
+   Base Layout
+   ================================ */
+section {
     min-height: 100vh;
-    /* padding: 6rem 2rem 2rem; */
     display: flex;
     justify-content: center;
-    background-color: #0f0f1a !important; /* fondo más pro */
+    background-color: #0f0f1a !important;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     font-size: 1rem;
-    /* margin-top: 35px; */
 }
 
 #auditorio {
@@ -40,17 +38,11 @@ section{
     font-size: 1rem;
 }
 
-
-
-/* Responsive nav */
-
-
-
-/* Auditorio */
-
+/* ================================
+   Hero Section
+   ================================ */
 .hero {
     min-height: 100vh;
-    /* background-image: url("/assets/images/LMV_BG.webp"); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,14 +66,15 @@ section{
     margin-bottom: 2rem;
 }
 
-.image-a{
-  max-height: 150px;
-  object-fit: contain;
-  margin-top: 1rem;
+.image-a {
+    max-height: 150px;
+    object-fit: contain;
+    margin-top: 1rem;
 }
 
-/* Contador */
-
+/* ================================
+   Countdown Timer
+   ================================ */
 .countdown {
     display: flex;
     justify-content: center;
@@ -90,7 +83,6 @@ section{
 }
 
 .countdown-item {
-    /* background: rgba(255, 255, 255, 0.1); */
     padding: 1rem;
     border-radius: 10px;
     min-width: 100px;
@@ -107,8 +99,9 @@ section{
     text-transform: uppercase;
 }
 
-/* Cards */
-/* Contenedor de todo el layout de cards */
+/* ================================
+   Cards Layout
+   ================================ */
 .auditorio-layout {
     display: flex;
     flex-direction: column;
@@ -118,10 +111,11 @@ section{
     margin: 0 auto;
 }
 
-/* 🔷 Botón grande: Auditorio Principal */
+/* ================================
+   Main Button (Auditorio Principal)
+   ================================ */
 .grid-button.principal {
     width: 100%;
-    /* height: var(--card-height); */
     height: 40vh;
     background: #191c29;
     border-radius: 12px;
@@ -135,14 +129,11 @@ section{
     font-size: 1.5rem;
 }
 
-
 .grid-button.principal::before,
 .grid-button.principal::after {
     content: "";
     position: absolute;
     z-index: -1;
-    /* top: -1%;
-    left: -1%; */
     width: 102%;
     height: 102%;
     background-image: linear-gradient(var(--rotate), #00aaff, #4e00c2);
@@ -150,93 +141,126 @@ section{
     animation: spin 3s linear infinite;
 }
 
-
 .grid-button.principal::before {
     width: 100%;
     height: 100%;
-    /* top: -1%;
-    left: -1%; */
 }
 
 .grid-button.principal::after {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-image: linear-gradient(var(--rotate), #5ddcff, #4e00c2);
-  transform: scale(1);
-  opacity: 1;
-  animation: spin 3s linear infinite;
-  filter: none; /* 💥 Elimina el blur */
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #4e00c2);
+    transform: scale(1);
+    opacity: 1;
+    animation: spin 3s linear infinite;
+    filter: none;
 }
 
-
+/* ================================
+   Video / Image Container
+   ================================ */
 .video-container {
-  border: 5px solid transparent;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden; /* evita que el video sobresalga */
+    border: 5px solid transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .video-bg {
-  /* border: 4px solid transparent; */
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  pointer-events: none;
-  /* background: rgba(13, 13, 24, 0.733); mejora legibilidad */
-  /* filter: blur(2px); 🎯 Aplica desenfoque directamente al video */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
 }
 
+/* ================================
+   Inner Overlays
+   ================================ */
 .grid-button.principal .inner {
-  position: absolute;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-weight: bold;
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
 }
-
 
 .grid-button.principal .inner-two {
-
-  position: absolute; /* 👈 Necesario para estar encima */
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.534); 
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  color: var(--text);
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.534);
+       backdrop-filter: blur(2px);
+       -webkit-backdrop-filter: blur(2px); */
+    color: var(--text);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 
+/* ================================
+   Live Pill & Zoom Button
+   ================================ */
+.grid-button.principal .live-pill {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #ff0000;
+    color: #fff;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(255,0,0,0.6);
+    animation: pulse 1.5s ease-in-out infinite;
+    z-index: 5;
+}
 
-/* 🔷 Fila de botones secundarios */
+.grid-button.principal .zoom-btn {
+    position: relative;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    color: #fff;
+    background: #005fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 5;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ================================
+   Secondary Buttons
+   ================================ */
 .secundarios {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -244,7 +268,6 @@ section{
     width: 100%;
 }
 
-/* 🔷 Cada botón secundario */
 .secundarios .grid-button {
     aspect-ratio: 3 / 2;
     background: #191c29;
@@ -265,30 +288,14 @@ section{
     position: absolute;
     z-index: -1;
     border-radius: 12px;
-    background-image: linear-gradient(var(--rotate), #7700ff, #bc02d8,  #0d0d18, #0d0d18, #0d0d18, #0d0d18);
+    background-image: linear-gradient(var(--rotate), #7700ff, #bc02d8, #0d0d18);
     animation: spin 3s linear infinite;
 }
 
 .secundarios .grid-button::before {
     width: 100%;
     height: 100%;
-
 }
-
-/* .secundarios .grid-button::after {
-  content: "";
-  position: absolute;
-  z-index: -2;
-
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(var(--rotate), #0d0d18, #7600ff, #0d0d18);
-  transform: scale(1);
-  opacity: 1;
-  animation: spin 2.5s linear infinite;
-  filter: none; 
-} */
-
 
 .secundarios .grid-button:hover {
     transform: translateY(-5px);
@@ -308,93 +315,103 @@ section{
     height: 100%;
 }
 
+/* ================================
+   Animations
+   ================================ */
 @keyframes spin {
-    0% {
-        --rotate: 0deg;
-    }
-
-    100% {
-        --rotate: 360deg;
-    }
+    0% { --rotate: 0deg; }
+    100% { --rotate: 360deg; }
 }
 
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
 
+/* ================================
+   Responsive Media Queries (modificaciones)
+   ================================ */
 
+/* Asegurar que la imagen/video siempre esté visible */
+.video-bg {
+  display: block !important;
+}
+
+/* Ajustes intermedios en tablets grandes */
 @media (max-width: 900px) {
-    section {
-        padding: 1rem 1rem 2rem;
-    }
-
+  section {
+    padding: 1rem 1rem 2rem;
+  }
+  .grid-button.principal {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    max-height: 50vh;
+  }
 }
 
-
-
-
+/* Breakpoint principal para tablets/móviles grandes */
 @media (max-width: 768px) {
-    section {
-        padding: 1rem 1rem 2rem;
-    }
-
+  .hero-content {
+    max-width: 90%;
+  }
+  .countdown {
+    gap: 1rem;
+    flex-wrap: wrap;   /* permite que el contador haga wrap */
+  }
+  .secundarios {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columnas en vez de 3 */
+  }
+  .grid-button.principal {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    max-height: 45vh;
+  }
 }
 
-
-
-/* 🔧 Responsive opcional */
+/* Móviles medianos */
 @media (max-width: 600px) {
-    .grid-button.principal {
-        height: 200px;
-        }
-
-    .hero {
-        padding: 2rem 0;
-    }
-
-    section {
-        font-size: 1.5rem;
-        padding: 0rem 1rem 2rem;
-    }
-
+  .grid-button.principal {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    max-height: 40vh;
+  }
+  /* Anular cualquier display:none */
+  .video-bg {
+    display: block !important;
+  }
+  .hero {
+    padding: 2rem 0;
+  }
+  section {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
-
-
+/* Móviles pequeños */
 @media (max-width: 515px) {
-    .grid-button.principal {
-        height: 200px;
-        }
-
-    .hero {
-        padding: 2rem 0;
-    }
-
-    section {
-        font-size: 1.5rem;
-        padding: 4rem 1rem 2rem;
-    }
-
-    .secundarios {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .inner span{
-        color: #5ddcff;
-        font-size: 0.9rem;
-    }
-
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .image-a {
+    max-height: 80px;
+  }
+  .secundarios {
+    grid-template-columns: 1fr;  /* un botón por fila */
+  }
+  .countdown-item {
+    min-width: 50px;              /* más compacto */
+    padding: 0.5rem;
+  }
+  .countdown-item span {
+    font-size: 1.2rem;
+  }
+  .countdown-item label {
+    font-size: 0.7rem;
+  }
+  .grid-button.principal {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    max-height: 35vh;
+  }
 }
-
-
-
-@media (max-width: 515px) {
-
-    .inner span{
-        font-size: 0.6rem;
-    }
-
-}
-
-
-
