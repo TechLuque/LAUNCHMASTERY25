@@ -1,19 +1,27 @@
-const URL_API = "https://script.google.com/macros/s/AKfycby56cG06rEqvPHvlQRvsmuZiUN-Ab2oOxx7SP8cqZdW5EKEEUSxr-V9B-_Rfi7A0fJKSg/exec";
+const URL_API = "https://script.google.com/macros/s/AKfycbysE2U4FStVMSAqoexL_D057mTdg_46P2vzR6_mpsHke6icpdrHzjqamUauFJqtYhUZ9Q/exec";
 
+document.addEventListener("DOMContentLoaded", async () => {
+  const labelNombre = document.querySelector(".name"); // El nombre grande en la tarjeta
 
-document.addEventListener("DOMContentLoaded", () => {
-  const labelNombre = document.querySelector(".name");
+  const correo = localStorage.getItem("correo");
+  if (!correo) return;
 
-  // Obtener parámetros de URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const nombre = urlParams.get("nombre");
+  try {
+    const res = await fetch(URL_API);
+    const data = await res.json();
 
-  if (nombre) {
-    labelNombre.textContent = decodeURIComponent(nombre).toUpperCase();
-  } else {
-    labelNombre.textContent = "ALVARO LUQUE";
+    const match = data.email.find(item => item.email.trim().toLowerCase() === correo.trim().toLowerCase());
+
+    if (match) {
+      labelNombre.textContent = match.name.toUpperCase();
+    } else {
+      labelNombre.textContent = "USUARIO NO ENCONTRADO";
+    }
+  } catch (err) {
+    console.error("Error al cargar los datos:", err);
   }
 });
+
 document.addEventListener('DOMContentLoaded', () => {
   const duracionRotacion = 10;
   const app = document.querySelector('#app');

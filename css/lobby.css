@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');   
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');    */
    
    :root {
       --bg: #0f0f1a;
@@ -15,7 +15,7 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      /* font-family: 'Montserrat', sans-serif; */
       background-color: var(--bg);
       color: var(--text);
       overflow-x: hidden;
