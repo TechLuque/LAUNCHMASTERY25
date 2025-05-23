@@ -1,86 +1,70 @@
-const URL_API = "https://script.google.com/macros/s/AKfycbysE2U4FStVMSAqoexL_D057mTdg_46P2vzR6_mpsHke6icpdrHzjqamUauFJqtYhUZ9Q/exec";
+const URL_API = "https://script.google.com/macros/s/AKfycby56cG06rEqvPHvlQRvsmuZiUN-Ab2oOxx7SP8cqZdW5EKEEUSxr-V9B-_Rfi7A0fJKSg/exec";
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const labelNombre = document.querySelector(".name"); // El nombre grande en la tarjeta
 
-  const correo = localStorage.getItem("correo");
-  if (!correo) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const labelNombre = document.querySelector(".name");
 
-  try {
-    const res = await fetch(URL_API);
-    const data = await res.json();
+  // Obtener parámetros de URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const nombre = urlParams.get("nombre");
 
-    const match = data.email.find(item => item.email.trim().toLowerCase() === correo.trim().toLowerCase());
-
-    if (match) {
-      labelNombre.textContent = match.name.toUpperCase();
-    } else {
-      labelNombre.textContent = "USUARIO NO ENCONTRADO";
-    }
-  } catch (err) {
-    console.error("Error al cargar los datos:", err);
+  if (nombre) {
+    labelNombre.textContent = decodeURIComponent(nombre).toUpperCase();
+  } else {
+    labelNombre.textContent = "ALVARO LUQUE";
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const duracionRotacion = 10;
+  const app = document.querySelector('#app');
+  const ticket = document.querySelector('.ticket');
 
+  // Guardamos las animaciones en variables
+  const rotacion = gsap.to(app, {
+    "--r": "360deg",
+    duration: duracionRotacion,
+    ease: "none",
+    repeat: -1,
+    modifiers: {
+      "--r": gsap.utils.unitize(v => parseFloat(v) % 360)
+    }
+  });
 
+  const brillo = gsap.to(app, {
+    "--p": "0%",
+    duration: duracionRotacion / 2,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true
+  });
 
-const speed = 7;
-const r = gsap.timeline({ repeat: -1 });
-const o = gsap.timeline({ repeat: -1 });
-const h = gsap.timeline({ repeat: -1 });
+  const intensidad = gsap.to(app, {
+    "--o": 1,
+    duration: duracionRotacion / 4,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true
+  });
 
-const $ticket = document.querySelector(".ticket");
-$ticket.addEventListener("mouseenter", () => {
-  r.pause();
-  o.pause();
-  h.pause();
-});
-$ticket.addEventListener("mouseleave", () => {
-  r.play();
-  o.play();
-  h.play();
-});
+  const holo = gsap.to(app, {
+    "--h": "100%",
+    duration: duracionRotacion / 4,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true
+  });
 
-r.to("#app", {
-  "--r": "180deg",
-  "--p": "0%",
-  duration: speed,
-  ease: "sine.in"
-});
-r.to("#app", {
-  "--r": "360deg",
-  "--p": "100%",
-  duration: speed,
-  ease: "sine.out"
-});
-o.to("#app", {
-  "--o": 1,
-  duration: speed / 2,
-  ease: "power1.in"
-});
-o.to("#app", {
-  "--o": 0,
-  duration: speed / 2,
-  ease: "power1.out"
-});
+  ticket.addEventListener("mouseenter", () => {
+    rotacion.pause();
+    brillo.pause();
+    intensidad.pause();
+    holo.pause();
+  });
 
-h.to("#app", {
-  "--h": "100%",
-  duration: speed / 2,
-  ease: "sine.in"
-});
-h.to("#app", {
-  "--h": "50%",
-  duration: speed / 2,
-  ease: "sine.out"
-});
-h.to("#app", {
-  "--h": "0%",
-  duration: speed / 2,
-  ease: "sine.in"
-});
-h.to("#app", {
-  "--h": "50%",
-  duration: speed / 2,
-  ease: "sine.out"
+  ticket.addEventListener("mouseleave", () => {
+    rotacion.play();
+    brillo.play();
+    intensidad.play();
+    holo.play();
+  });
 });
