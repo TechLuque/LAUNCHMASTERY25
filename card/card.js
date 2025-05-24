@@ -1,7 +1,7 @@
 const URL_API = "https://script.google.com/macros/s/AKfycbysE2U4FStVMSAqoexL_D057mTdg_46P2vzR6_mpsHke6icpdrHzjqamUauFJqtYhUZ9Q/exec";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const labelNombre = document.querySelector(".number"); // El nombre grande en la tarjeta
+  const labelNombre = document.querySelector(".number");
 
   const correo = localStorage.getItem("correo");
   if (!correo) return;

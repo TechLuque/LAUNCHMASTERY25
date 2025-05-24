@@ -1,11 +1,10 @@
-
 #cronograma {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(135deg, #000, #111);
-    gap: 2em;
-
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #000, #111);
+  gap: 2em;
 }
+
 .titulo {
   margin: 2rem 0;
   font-size: 2rem;
@@ -70,7 +69,6 @@
   margin: 0;
   text-align: center;
   font-size: 1.8rem;
-  /* margin-bottom: 10%; */
   font-weight: 700;
 }
 
@@ -79,7 +77,6 @@
   color: #d702f3;
   text-align: center;
   font-size: 1.8rem;
-  /* margin: 0 0 15%; */
   font-weight: 700;
   padding: 0 10%;
 }
@@ -87,19 +84,17 @@
 .horario-overlay h3::after {
   content: "";
   display: block;
-  width: 60%;              /* solo el 10% del ancho */
-  height: 2px;             /* grosor de la línea */
+  width: 60%;
+  height: 2px;
   background-color: #d702f3;
-  margin: 20px auto 0;      /* separación del texto y centrado */
+  margin: 20px auto 0;
 }
-
 
 .bloque {
   display: flex;
   text-align: center;
   justify-content: space-between;
   width: 90%;
-  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
   padding: 0.5rem 1rem;
   gap: 1rem;
 }
@@ -118,13 +113,11 @@
   font-weight: 500;
 }
 
-
 .dia:hover .horario-overlay {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-
 
 .dia h2 {
   margin: 0.5rem;
@@ -145,9 +138,7 @@
 .dia:hover .ver-horarios {
   opacity: 0;
   pointer-events: none;
-
 }
-
 
 @media(max-width: 1500px) {
     .dia {
@@ -162,7 +153,6 @@
         font-size: 1rem;
     }
 
-
     .ver-horarios {
         padding: 1rem;
         font-size: 1rem;
@@ -176,47 +166,11 @@
 
 
 
-/* @media(max-width: 600px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dia {
-    width: 90%;
-  }
-
-    .dia h2 {
-    font-size: 1rem;
-    }
-
-    .evento {
-        font-size: 0.7rem;
-    }
-
-    .horario-overlay h3 {
-        font-size: 1rem;
-    }
-
-
-    .ver-horarios {
-    padding: 0.5rem;
-    font-size: 0.7rem;
-    }
-
-    .horario-overlay {
-    gap: 1rem;
-    padding: 1rem 0.5rem;
-    }   
-} */
-
-
 
 @media (max-width: 600px) {
         .horario-overlay h3 {
         font-size: 1.1rem;
     }
-
 
     .horario-overlay h3 {
       font-size: 1rem;

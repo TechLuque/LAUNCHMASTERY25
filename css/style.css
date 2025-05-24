@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   color: white;
@@ -13,7 +13,6 @@ body, html {
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .hero {
   height: 100vh;
   width: 100%;
@@ -23,7 +22,6 @@ body, html {
   align-items: center;
   color: white;
   overflow: hidden;
-  /* background: radial-gradient(circle at top left, #20428c 0%, #060318 100%); */
 }
 
 .hero::before,
@@ -31,7 +29,6 @@ body, html {
   content: "";
   position: absolute;
   border-radius: 50%;
-  /* background: radial-gradient(circle, rgba(32, 66, 140, 0.5), transparent 70%); */
   filter: blur(100px);
   z-index: 0;
 }
@@ -50,7 +47,6 @@ body, html {
   right: -5%;
 }
 
-
 .overlay {
   position: relative;
   z-index: 1;
@@ -63,7 +59,6 @@ body, html {
   box-sizing: border-box;
 }
 
-/* Columna izquierda */
 .left-column {
   padding: 0 10rem;
   flex: 1;
@@ -72,13 +67,8 @@ body, html {
   gap: 1rem;
 }
 
-
 .left-column {
-    padding: 0 10rem;
-  /* flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; */
+  padding: 0 10rem;
 }
 
 .logo-image {
@@ -86,7 +76,6 @@ body, html {
   object-fit: contain;
   margin-top: 1rem;
 }
-
 
 .title {
   font-size: 3.5rem;
@@ -97,7 +86,6 @@ body, html {
   font-size: 1.1rem;
 }
 
-/* Botones */
 .buttons {
   display: flex;
   gap: 2rem;
@@ -121,11 +109,7 @@ body, html {
 }
 
 .cta-btn.outline {
-  background-image: linear-gradient(
-    315deg,
-    #00aaff -10%,
-    #7600ff  50%
-  );
+  background-image: linear-gradient(315deg,#00aaff -10%,#7600ff 50%);
   color: #ffffff;
 }
 
@@ -138,31 +122,35 @@ body, html {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(108, 78, 255, 0.7);
   }
+
   70% {
     transform: scale(1.1);
     box-shadow: 0 0 0 10px rgba(108, 78, 255, 0);
   }
+
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(108, 78, 255, 0);
   }
-} 
+}
 
 @keyframes pulse {
   0% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(108, 78, 255, 0.7);
   }
+
   70% {
     transform: scale(1.1);
     box-shadow: 0 0 0 10px rgba(108, 78, 255, 0);
   }
+
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(108, 78, 255, 0);
   }
-} 
-/* Estadísticas */
+}
+
 .stats {
   display: flex;
   gap: 1rem;
@@ -196,49 +184,7 @@ a {
   white-space: nowrap;
 }
 
-
-
-
-
-/* Responsive */
-/* @media (max-width: 768px) {
-  .overlay {
-    grid-template-columns: 1fr;
-    padding: 2rem;
-    text-align: center;
-  } */
-
-  /* .left-column {
-    align-items: center;
-  } */
-
-  /* .logo-image {
-    max-width: 100px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .stats {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .cta-btn {
-    width: 80%;
-  } 
-} */
-
 @media (max-width: 1700px) {
-  /* .overlay {
-    padding: 0 5rem;
-  } */
 
   .left-column {
     padding: 0 5rem;
@@ -271,17 +217,14 @@ a {
 }
 
 
-/* ====================== */
-/* RESPONSIVE - TABLET & MOBILE */
-/* ====================== */
-
 
 @media (max-width: 1024px) {
-  html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
 
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
   .overlay {
     width: 100%;
@@ -298,22 +241,20 @@ a {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    /* display: grid;
-    grid-template-rows: 1fr 1fr 1fr; */
     padding: 0 1.5rem;
     align-items: center;
     text-align: center;
   }
 
   img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
   .cta-btn {
     max-width: 90vw;
-  } 
+  }
 
   .title {
     font-size: 2rem;
@@ -337,7 +278,7 @@ a {
     max-width: 260px;
   }
 
-    .stats {
+  .stats {
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
@@ -359,10 +300,10 @@ a {
 
 @media (max-width: 1000px) {
 
-    .central-speaker {
-      width: 100%;
-      max-width: 420px;
-      margin-bottom: 0rem;
+  .central-speaker {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 0rem;
   }
 
   .title {

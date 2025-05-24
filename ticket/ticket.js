@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const duracionRotacion = 10;
   const app = document.querySelector('#app');
   const ticket = document.querySelector('.ticket');
-
-  // Guardamos las animaciones en variables
   const rotacion = gsap.to(app, {
     "--r": "360deg",
     duration: duracionRotacion,

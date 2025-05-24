@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,132 +11,121 @@
   <link rel="stylesheet" href="css/modal.css" />
   <link rel="stylesheet" href="css/button.css" />
 
-      <link rel="stylesheet" href="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.css" />
-        <link rel="icon" type="image/png" href="assets/images/FAVICON LM Y EDD_FAVICON EDD V.png">
-<script src="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.css" />
+  <link rel="icon" type="image/png" href="assets/images/FAVICON LM Y EDD_FAVICON EDD V.png">
+  <script src="https://unpkg.com/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
 
 </head>
+
 <body>
-    <!-- Menú superior -->
-<header class="main-header">
-  <nav class="nav">
-    <ul>
-      <!-- <li><a href="#">INGRESAR<span class="highlight"></span></a></li> -->
-      <!-- <li><a href="#">VER COMBATES</a></li> -->
-      <li><a href="https://theperfectlaunch.co/lm25-sl1-abr25">ADQUIERE TU ENTRADA<span class="highlight available">¡AQUÍ!</span></a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="main-header">
+    <nav class="nav">
+      <ul>
+        <li><a href="https://theperfectlaunch.co/lm25-sl1-abr25">ADQUIERE TU ENTRADA<span
+              class="highlight available">¡AQUÍ!</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="hero">
     <div class="overlay">
 
-        <div class="left-column">
-      <h1 class="title">Aprende a crear, vender y entregar tu propio curso digital (usando Inteligencia Artificial).<br></h1>
-      <!-- <p class="description">
-        El evento virtual más importante de emprendimiento digital.<br>
-        Vive 3 días de alto impacto con los mejores speakers.
-      </p> -->
-      <div class="buttons">
-        <!-- <button class="cta-btn primary"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></button> -->
-        <button>
-          <span class="text"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></span>
-          <span class="shimmer"></span>
-        </button>
-        <button id="openModalBtn">
-          <span class="text">Ingresar</span>
-          <span class="shimmer"></span>
-        </button>
-        <!-- <button class="cta-btn primary" id="openModalBtn">Ingresar</button> -->
+      <div class="left-column">
+        <h1 class="title">Aprende a crear, vender y entregar tu propio curso digital (usando Inteligencia
+          Artificial).<br></h1>
+        <div class="buttons">
+          <button>
+            <span class="text"><a href="https://theperfectlaunch.co/lm25-sl1-abr25">Adquiere tu entrada</a></span>
+            <span class="shimmer"></span>
+          </button>
+          <button id="openModalBtn">
+            <span class="text">Ingresar</span>
+            <span class="shimmer"></span>
+          </button>
+        </div>
+
+        <dialog id="launchModal" closedby="any">
+          <button class="close-btn" id="closeModalBtn" aria-label="Cerrar modal">×</button>
+          <h2>¡Bienvenido a Launch Mastery!</h2>
+          <p>Ingresa tu correo para acceder al LOBBY y disfrutar toda la experiencia de Launch Mastery™ Virtual. (Usa el
+            MISMO correo con el que compraste tu ticket)</p>
+
+          <form class="modal-form">
+            <input id="email" type="email" placeholder="Correo electrónico" required class="modal-input" />
+            <p id="msg" style="margin: 0; color: #f88; font-size: 0.8rem;"></p>
+
+            <div class="modal-actions">
+              <button type="button" class="" id="login">Ingresar</button>
+              <button type="button" class="" id="closeModal"><a href="https://cliczy.com/SOPORTE">Soporte</a></button>
+            </div>
+            <p>Al ingresar al lobby, autorizo a Luque Academy y sus representantes a capturar y utilizar mi imagen y voz
+              en fotografías y grabaciones de video con fines promocionales y comerciales.</p>
+          </form>
+        </dialog>
+
+        <div class="stats">
+          <div class="stat-box"><strong>2k+</strong><span>Asistentes</span></div>
+          <div class="stat-box"><strong>8+</strong><span>Expertos</span></div>
+          <div class="stat-box"><strong>3 días</strong><span>Evento</span></div>
+        </div>
+
+        <div class="speakers-list">
+          <img src="assets/images/JEYSON2.png" class="mini-speaker" data-name="JEYSON PRADA"
+            data-role="Experto en automatizaciones" />
+          <img src="assets/images/JULIANA2.png" class="mini-speaker" data-name="JULIANA PEÑA"
+            data-role="Estratega de funnels" />
+          <img src="assets/images/JUANJO2.png" class="mini-speaker" data-name="JUAN JOSÉ ARENALES"
+            data-role="Especialista en lanzamientos" />
+          <img src="assets/images/PAOLA2.png" class="mini-speaker" data-name="PAOLA LUQUE"
+            data-role="Coach de productividad" />
+          <img src="assets/images/SAID2.png" class="mini-speaker" data-name="SAID DURÁN"
+            data-role="Copywriter persuasivo" />
+        </div>
+
       </div>
 
-      <dialog id="launchModal" closedby="any">
-        <button class="close-btn" id="closeModalBtn" aria-label="Cerrar modal">×</button>
-        <h2>¡Bienvenido a Launch Mastery!</h2>
-        <p>Ingresa tu correo para acceder al LOBBY y disfrutar toda la experiencia de Launch Mastery™ Virtual. (Usa el MISMO correo con el que compraste tu ticket)</p>
-
-        <form class="modal-form">
-          <input
-            id="email"
-            type="email"
-            placeholder="Correo electrónico"
-            required
-            class="modal-input"
-          />
-          <p id="msg" style="margin: 0; color: #f88; font-size: 0.8rem;"></p>
-          
-          <div class="modal-actions">
-            <button type="button" class="" id="login">Ingresar</button>
-            <button type="button" class="" id="closeModal"><a href="https://cliczy.com/SOPORTE">Soporte</a></button>
-          </div>
-              <p>Al ingresar al lobby, autorizo a Luque Academy y sus representantes a capturar y utilizar mi imagen y voz en fotografías y grabaciones de video con fines promocionales y comerciales.</p>
-        </form>
-      </dialog>
-
-
-
-
-      <div class="stats">
-        <div class="stat-box"><strong>2k+</strong><span>Asistentes</span></div>
-        <div class="stat-box"><strong>8+</strong><span>Expertos</span></div>
-        <div class="stat-box"><strong>3 días</strong><span>Evento</span></div>
+      <div id="centralSpeaker" class="central-speaker">
+        <img src="assets/images/LOGO2.png" alt="Launch Mastery Logo" class="logo-image" />
       </div>
 
-    <div class="speakers-list">
-      <img src="assets/images/JEYSON2.png" class="mini-speaker" data-name="JEYSON PRADA" data-role="Experto en automatizaciones" />
-      <img src="assets/images/JULIANA2.png" class="mini-speaker" data-name="JULIANA PEÑA" data-role="Estratega de funnels" />
-      <img src="assets/images/JUANJO2.png" class="mini-speaker" data-name="JUAN JOSÉ ARENALES" data-role="Especialista en lanzamientos" />
-      <img src="assets/images/PAOLA2.png" class="mini-speaker" data-name="PAOLA LUQUE" data-role="Coach de productividad" />
-      <img src="assets/images/SAID2.png" class="mini-speaker" data-name="SAID DURÁN" data-role="Copywriter persuasivo" />
-    </div>
+      <div class="carousel-speakers">
+        <div class="carousel-track">
+          <!-- Original -->
+          <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
+          <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
+          <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
+          <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
+          <img src="assets/images/SAID.png" alt="SAID DURÁN" />
 
-    </div>
+          <!-- Copia -->
+          <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
+          <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
+          <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
+          <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
+          <img src="assets/images/SAID.png" alt="SAID DURÁN" />
 
-    <div id="centralSpeaker" class="central-speaker">
-    <img src="assets/images/LOGO2.png" alt="Launch Mastery Logo" class="logo-image" />
-    </div>
+          <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
+          <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
+          <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
+          <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
+          <img src="assets/images/SAID.png" alt="SAID DURÁN" />
 
-        <!-- Carrusel móvil -->
-    <div class="carousel-speakers">
-      <div class="carousel-track">
-        <!-- Original -->
-        <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
-        <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
-        <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
-        <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
-        <img src="assets/images/SAID.png" alt="SAID DURÁN" />
-        
-        <!-- Copia -->
-        <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
-        <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
-        <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
-        <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
-        <img src="assets/images/SAID.png" alt="SAID DURÁN" />
+          <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
+          <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
+          <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
+          <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
+          <img src="assets/images/SAID.png" alt="SAID DURÁN" />
 
-        <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
-        <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
-        <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
-        <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
-        <img src="assets/images/SAID.png" alt="SAID DURÁN" />
-
-        <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
-        <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
-        <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
-        <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
-        <img src="assets/images/SAID.png" alt="SAID DURÁN" />
-
-        <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
-        <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
-        <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
-        <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
-        <img src="assets/images/SAID.png" alt="SAID DURÁN" />
+          <img src="assets/images/JEYSON.png" alt="JEYSON PRADA" />
+          <img src="assets/images/JULIANA.png" alt="JULIANA PEÑA" />
+          <img src="assets/images/JUANJO.png" alt="JUAN JOSÉ ARENALES" />
+          <img src="assets/images/PAOLA.png" alt="PAOLA LUQUE" />
+          <img src="assets/images/SAID.png" alt="SAID DURÁN" />
+        </div>
       </div>
+
+
     </div>
-
-
-
-
-</div>
 
   </div>
   <!-- <script src="script/login.js"></script> -->
@@ -144,4 +133,5 @@
   <script src="speakers/speakers.js"></script>
   <script src="script/modal.js"></script>
 </body>
+
 </html>

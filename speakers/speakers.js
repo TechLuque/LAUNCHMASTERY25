@@ -20,9 +20,9 @@ thumbnails.forEach(thumbnail => {
 
 
   thumbnail.addEventListener('mouseleave', () => {
-  central.innerHTML = `
+    central.innerHTML = `
     <img src="assets/images/LOGO2.png" alt="Launch Mastery Logo" class="logo-image" />
   `;
-});
+  });
 
 });

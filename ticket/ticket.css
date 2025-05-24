@@ -1,12 +1,9 @@
 .card-usu {
   display: grid;
   grid-template-columns: 50% 50%;
-  /* place-items: center; */
   width: 100%;
   height: 100%;
-  /* perspective: 1000px; */
 }
-
 
 .medium {
   width: 100%;
@@ -14,7 +11,6 @@
   display: grid;
   place-items: center;
 }
-
 
 .welcome {
   display: flex;
@@ -24,12 +20,11 @@
   gap: 5rem;
 }
 
-.logo-image-welcome{
+.logo-image-welcome {
   max-height: 200px;
   object-fit: contain;
   margin-top: 1rem;
 }
-
 
 :root {
   --unit: 1vmin;
@@ -48,7 +43,6 @@
   --r: 0deg;
 }
 
-
 #app {
   perspective: 1000px;
   display: flex;
@@ -56,23 +50,17 @@
   justify-content: center;
   overflow: hidden;
   padding: 50px;
-  height: 100vh; /* usa altura completa */
+  height: 100vh;
 }
 
-
-/* ==== TICKET ROTATION ==== */
 .ticket {
-  width: calc(240 * var(--px)); /* más pequeño que 300 */
+  width: calc(240 * var(--px));
   aspect-ratio: var(--ar);
   position: relative;
   transform-style: preserve-3d;
   will-change: transform;
   transform: rotateY(var(--r));
 }
-
-
-/* === LUZ BRILLANTE === */
-
 
 .front::before,
 .back::before {
@@ -83,14 +71,7 @@
   mix-blend-mode: screen;
   opacity: var(--o);
   z-index: 5;
-  background: linear-gradient(
-    115deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.233) 40%,
-    rgba(255, 255, 255, 0.459) 50%,
-    rgba(255, 255, 255, 0.233) 40%,
-    rgba(255, 255, 255, 0) 0%
-  );
+  background: linear-gradient(115deg,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.233) 40%,rgba(255, 255, 255, 0.459) 50%,rgba(255, 255, 255, 0.233) 40%,rgba(255, 255, 255, 0) 0%);
   background-size: 280% 100%;
   border-radius: inherit;
   mask-image: var(--ticket);
@@ -104,24 +85,21 @@
 }
 
 .front::before {
-  background-position: calc(100% - var(--p)) center; /* Invertido */
+  background-position: calc(100% - var(--p)) center;
 }
 
 .back::before {
-  background-position: var(--p) center; /* Normal */
+  background-position: var(--p) center;
 }
 
-
-/* Inversión para que uno funcione en ida y otro en regreso */
 .ticket::before {
-  transform: rotateY(0deg); /* se ve al inicio */
+  transform: rotateY(0deg);
 }
+
 .ticket::after {
-  transform: rotateY(360deg); /* se ve al voltearse */
+  transform: rotateY(360deg);
 }
 
-
-/* === CARAS DEL TICKET === */
 .face {
   position: absolute;
   inset: 0;
@@ -141,7 +119,7 @@
 
 .front,
 .back {
-  position: absolute; /* NO uses relative aquí */
+  position: absolute;
   inset: 0;
   backface-visibility: hidden;
   background-size: contain;
@@ -149,18 +127,15 @@
   background-repeat: no-repeat;
   transform-style: preserve-3d;
   z-index: 1;
-
   mask-image: var(--ticket);
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
-
   -webkit-mask-image: var(--ticket);
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
 }
-
 
 .front {
   background-image: url('../assets/images/frontt.png');
@@ -170,7 +145,6 @@
   background-image: url('../assets/images/back.png');
   transform: rotateY(180deg);
 }
-
 
 .name {
   position: absolute;
@@ -183,21 +157,15 @@
   z-index: 10;
   text-align: center;
   pointer-events: none;
-  /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); */
-  white-space: nowrap;         
-  overflow: hidden;            
-
-  max-width: 90%;    
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
   font-family: 'Bebas Neue', sans-serif !important;
   font-size: 3rem;
   letter-spacing: 0.05em;
   line-height: 1;
   text-transform: uppercase;
 }
-
-
-
-/* ==== HOLOGRAMA INTERIOR ==== */
 
 @media (max-width: 2000px) {
   .name {
@@ -207,16 +175,12 @@
 }
 
 
-
 @media (max-width: 1700px) {
   .name {
     top: 38%;
   }
 }
 
-
-
-/* ==== RESPONSIVE ==== */
 @media (max-width: 900px) {
 
   .name {
@@ -239,11 +203,9 @@
     --scale: 1;
     width: 56vw;
     height: auto;
-    
+
   }
 }
-
-
 
 @media (max-width: 800px) {
 
@@ -255,7 +217,6 @@
 }
 
 
-
 @media (max-width: 800px) {
 
   .name {
@@ -265,7 +226,6 @@
 
 
 }
-
 
 @media (max-width: 730px) {
 
@@ -280,10 +240,7 @@
     margin-top: 6rem;
   }
 
-
-
 }
-
 
 @media (max-width: 530px) {
   .name {
@@ -296,7 +253,6 @@
   }
 
 }
-
 
 @media (max-width: 430px) {
   .logo-image-welcome {

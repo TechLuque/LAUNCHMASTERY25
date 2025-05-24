@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("email");
   const mensaje = document.getElementById("msg");
 
-
-// Cierra el modal si haces clic fuera del contenido
-
-
-  // Polyfill si es necesario
   if (modal && typeof modal.showModal !== "function" && typeof dialogPolyfill !== "undefined") {
     dialogPolyfill.registerDialog(modal);
   }
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /*Funcionalidad de boton para cerrar modal*/
   if (closeModalBtn) {
     closeModalBtn.addEventListener("click", () => {
       modal.close();
@@ -52,12 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const res = await fetch(URL_API);
         const data = await res.json();
-
-        // const listaCorreos = data.email.map(item => item.email.trim().toLowerCase());
-
-
-      const usuario = data.email.find(item => item.email.trim().toLowerCase() === email);
-
+        const usuario = data.email.find(item => item.email.trim().toLowerCase() === email);
 
         if (usuario) {
           localStorage.setItem("sesionIniciada", "true");

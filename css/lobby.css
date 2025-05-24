@@ -1,94 +1,77 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');    */
-   
-   :root {
-      --bg: #0f0f1a;
-      --primary: #7600ff;
-      --secondary: #00aaff;
-      --text: #fff;
-    }
+ :root {
+   --bg: #0f0f1a;
+   --primary: #7600ff;
+   --secondary: #00aaff;
+   --text: #fff;
+ }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+ }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+ body {
+   font-family: 'Montserrat', sans-serif;
+   background-color: var(--bg);
+   color: var(--text);
+   overflow-x: hidden;
+ }
 
-    /* Header */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #111827cc;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-    }
+ /* Header */
+ header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: #111827cc;
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   padding: 1rem;
+   backdrop-filter: blur(8px);
+   z-index: 1000;
+ }
 
-    header a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      transition: background 0.3s;
-    }
+ header a {
+   color: var(--text);
+   text-decoration: none;
+   font-weight: bold;
+   padding: 0.5rem 1rem;
+   border-radius: 0.5rem;
+   transition: background 0.3s;
+ }
 
-    /* header a:hover {
-      background: var(--primary);
-    } */
 
-    /* Sections */
-    /* section {
-      min-height: 100vh;
-      padding: 6rem 2rem 2rem; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-    } */
+ #inicio {
+   background: linear-gradient(135deg, var(--primary), var(--secondary));
+ }
 
-    #inicio {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-    }
+ #nosotros {
+   background: #1a1a2e;
+ }
 
-    #nosotros {
-      background: #1a1a2e;
-    }
+ #servicios {
+   background: #16213e;
+ }
 
-    #servicios {
-      background: #16213e;
-    }
+ #contacto {
+   background: #0f3460;
+ }
 
-    #contacto {
-      background: #0f3460;
-    }
+ @media (max-width: 768px) {
+   header {
+     flex-wrap: wrap;
+     gap: 1rem;
+   }
 
-    /* Responsive nav */
-    @media (max-width: 768px) {
-      header {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
+   section {
+     font-size: 1.5rem;
+   }
 
-      section {
-        font-size: 1.5rem;
-        /* padding: 6rem 1rem 2rem; */
-      }
-
-      header {
-        gap: 2rem;
-        padding: 0rem;
-      }
-    }
+   header {
+     gap: 2rem;
+     padding: 0rem;
+   }
+ }
