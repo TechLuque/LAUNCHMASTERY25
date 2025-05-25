@@ -30,8 +30,11 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-color: #0f0f1a !important;
-
+  background: url('../assets/images/BG_\ LM\ 6.png') no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: #0f0f1a !important; */
 }
 
 .content {
