@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mensaje.innerText = "";
 
       if (!email || !email.includes("@")) {
-        mensaje.innerText = "Ingresa un correo válido.";
+        mensaje.innerText = "Ingresa un correo válido o comunícate con Soporte";
         return;
       }
 

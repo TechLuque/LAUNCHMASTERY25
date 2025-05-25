@@ -23,7 +23,7 @@ document.getElementById("login").addEventListener("click", async () => {
       localStorage.setItem("nombre", user.name); // Guardar el nombre
       window.location.href = "preview.html";
     } else {
-      mensaje.innerText = "Correo no autorizado.";
+      mensaje.innerText = "Ingresa un correo válido o comunícate con Soporte";
     }
   } catch (error) {
     console.error(error);
