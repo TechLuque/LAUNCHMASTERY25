@@ -43,10 +43,56 @@
   position: relative;
   z-index: 1;
   font-size: 1.5rem;
-
 }
 
-.card::before,
+.card .lines {
+  position: absolute;
+  inset: 0;
+  /* background: transparent; */
+  overflow: hidden;
+  border-radius: 17px;
+  /* background: #464646; */
+}
+
+.card .lines::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 420px;
+  background: linear-gradient(
+    transparent,
+    #00aaff,
+    #7600ff,
+    /* #4561ff,
+    #ff4545, */
+    transparent
+  );
+  animation: animate 3s linear infinite;
+  transform-origin: 0 0;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card .lines::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  /* background: #292929; */
+  border-radius: 17px;
+}
+
+
+
+/* .card::before,
 .card::after {
   content: "";
   position: absolute;
@@ -70,7 +116,7 @@
     100% {
         --rotate: 360deg;
     }
-}
+} */
 
 
 .card .inner {
@@ -81,7 +127,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  width: 99%;
+  width: 98%;
   height: 99%;
   position: relative;
   overflow: hidden;
@@ -215,7 +261,10 @@
     font-weight: 300;
   }
 
-  
+    .card .inner {
+    height: 98%;
+  }
+
   /* Botón */
   .buy-btn {
     width: 100%;
