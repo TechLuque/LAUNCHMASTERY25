@@ -1,7 +1,10 @@
 #cronograma {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #000, #111);
+  background: url('../assets/images/BG_\ LM\ 6.png') no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   gap: 2em;
 }
 
