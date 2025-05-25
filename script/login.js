@@ -6,7 +6,7 @@ document.getElementById("login").addEventListener("click", async () => {
   const email = emailInput.value.trim().toLowerCase();
 
   if (!email) {
-    mensaje.innerText = "Ingresa un correo válido.";
+    mensaje.innerText = "Ingresa un correo válido o comunícate con Soporte";
     return;
   }
 
